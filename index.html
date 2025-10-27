@@ -1,0 +1,1655 @@
+
+<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var ewww_webp_supported=!1;function check_webp_feature(A,e){var w;e=void 0!==e?e:function(){},ewww_webp_supported?e(ewww_webp_supported):((w=new Image).onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A])}check_webp_feature("alpha");</script><script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var Arrive=function(c,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return e=void 0!==e&&("number"!=typeof e.length||e===c)?[e]:e}}),e=(l.prototype.addEvent=function(e,t,r,a){a={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(a),this._eventsBucket.push(a),a},l.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)e(t)&&(this._beforeRemoving&&this._beforeRemoving(t),(t=this._eventsBucket.splice(r,1))&&t.length&&(t[0].callback=null))},l.prototype.beforeAdding=function(e){this._beforeAdding=e},l.prototype.beforeRemoving=function(e){this._beforeRemoving=e},l),t=function(i,n){var o=new e,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e=t.target;e!==c.document&&e!==c||(e=document.getElementsByTagName("html")[0]);var r=new MutationObserver(function(e){n.call(this,e,t)}),a=i(t.options);r.observe(e,a),t.observer=r,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var a=u.toElementsArray(this),i=r,e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1};o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id)))&&(t.firedElems.push(e._id),!0)}var c=(i=new t(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},o=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(o=new t(function(){return{childList:!0,subtree:!0}},function(e,r){e.forEach(function(e){var t=e.removedNodes,e=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,r,i,e),u.callCallbacks(e,r)})})).bindEvent;return o.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},o};d(HTMLElement.prototype),d(NodeList.prototype),d(HTMLCollection.prototype),d(HTMLDocument.prototype),d(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(o,n,"unbindAllLeave"),n}function l(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function d(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=o.bindEvent,s(o,e,"unbindLeave")}}(window,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){var r;ewww_webp_supported?t(ewww_webp_supported):((r=new Image).onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e])}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(var i=document.querySelectorAll(".rev_slider ul li"),r=0,a=i.length;r<a;r++){ewwwAttr(i[r],"data-thumb",i[r].getAttribute("data-webp-thumb"));for(var n=1;n<11;)ewwwAttr(i[r],"data-param"+n,i[r].getAttribute("data-webp-param"+n)),n++}for(r=0,a=(i=document.querySelectorAll(".rev_slider img")).length;r<a;r++)ewwwAttr(i[r],"data-lazyload",i[r].getAttribute("data-webp-lazyload"));for(var o=document.querySelectorAll("div.woocommerce-product-gallery__image"),r=0,a=o.length;r<a;r++)ewwwAttr(o[r],"data-thumb",o[r].getAttribute("data-webp-thumb"))}for(var l=document.querySelectorAll("video"),r=0,a=l.length;r<a;r++)ewwwAttr(l[r],"poster",e?l[r].getAttribute("data-poster-webp"):l[r].getAttribute("data-poster-image"));for(var s,c=document.querySelectorAll("img.ewww_webp_lazy_load"),r=0,a=c.length;r<a;r++)e&&(ewwwAttr(c[r],"data-lazy-srcset",c[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(c[r],"data-srcset",c[r].getAttribute("data-srcset-webp")),ewwwAttr(c[r],"data-lazy-src",c[r].getAttribute("data-lazy-src-webp")),ewwwAttr(c[r],"data-src",c[r].getAttribute("data-src-webp")),ewwwAttr(c[r],"data-orig-file",c[r].getAttribute("data-webp-orig-file")),ewwwAttr(c[r],"data-medium-file",c[r].getAttribute("data-webp-medium-file")),ewwwAttr(c[r],"data-large-file",c[r].getAttribute("data-webp-large-file")),null!=(s=c[r].getAttribute("srcset"))&&!1!==s&&s.includes("R0lGOD")&&ewwwAttr(c[r],"src",c[r].getAttribute("data-lazy-src-webp"))),c[r].className=c[r].className.replace(/\bewww_webp_lazy_load\b/,"");for(var w=document.querySelectorAll(".ewww_webp"),r=0,a=w.length;r<a;r++)e?(ewwwAttr(w[r],"srcset",w[r].getAttribute("data-srcset-webp")),ewwwAttr(w[r],"src",w[r].getAttribute("data-src-webp")),ewwwAttr(w[r],"data-orig-file",w[r].getAttribute("data-webp-orig-file")),ewwwAttr(w[r],"data-medium-file",w[r].getAttribute("data-webp-medium-file")),ewwwAttr(w[r],"data-large-file",w[r].getAttribute("data-webp-large-file")),ewwwAttr(w[r],"data-large_image",w[r].getAttribute("data-webp-large_image")),ewwwAttr(w[r],"data-src",w[r].getAttribute("data-webp-src"))):(ewwwAttr(w[r],"srcset",w[r].getAttribute("data-srcset-img")),ewwwAttr(w[r],"src",w[r].getAttribute("data-src-img"))),w[r].className=w[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.suarasurabaya.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+
+<
+<script async="" src="js/suarasurabaya.js"></script>
+<script type="application/javascript" src="js/ats.js"></script>	
+
+			<style type="text/css">
+    .wrapper{height:100vh;overflow:hidden;position:relative}.wrapper::before{content:"";position:absolute;width:100%;height:100%;left:0;top:0;background:#fff;z-index:97}.wrapper::after{content:"";position:absolute;width:100%;height:100%;left:0;top:0;background-image:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBzdHlsZT0ibWFyZ2luOiBhdXRvOyBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDApOyBkaXNwbGF5OiBibG9jazsgc2hhcGUtcmVuZGVyaW5nOiBhdXRvOyIgd2lkdGg9IjIwMHB4IiBoZWlnaHQ9IjIwMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiPgo8cmVjdCB4PSIzOC41IiB5PSIzOC41IiB3aWR0aD0iNyIgaGVpZ2h0PSI3IiBmaWxsPSIjNDQ0NDQ0Ij4KICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJmaWxsIiB2YWx1ZXM9IiNmMDE5MjA7IzQ0NDQ0NDsjNDQ0NDQ0IiBrZXlUaW1lcz0iMDswLjEyNTsxIiBkdXI9IjEuMTkwNDc2MTkwNDc2MTkwNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBiZWdpbj0iMHMiIGNhbGNNb2RlPSJkaXNjcmV0ZSI+PC9hbmltYXRlPgo8L3JlY3Q+PHJlY3QgeD0iNDYuNSIgeT0iMzguNSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzQ0NDQ0NCI+CiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSIjZjAxOTIwOyM0NDQ0NDQ7IzQ0NDQ0NCIga2V5VGltZXM9IjA7MC4xMjU7MSIgZHVyPSIxLjE5MDQ3NjE5MDQ3NjE5MDVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgYmVnaW49IjAuMTQ4ODA5NTIzODA5NTIzOHMiIGNhbGNNb2RlPSJkaXNjcmV0ZSI+PC9hbmltYXRlPgo8L3JlY3Q+PHJlY3QgeD0iNTQuNSIgeT0iMzguNSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzQ0NDQ0NCI+CiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSIjZjAxOTIwOyM0NDQ0NDQ7IzQ0NDQ0NCIga2V5VGltZXM9IjA7MC4xMjU7MSIgZHVyPSIxLjE5MDQ3NjE5MDQ3NjE5MDVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgYmVnaW49IjAuMjk3NjE5MDQ3NjE5MDQ3NnMiIGNhbGNNb2RlPSJkaXNjcmV0ZSI+PC9hbmltYXRlPgo8L3JlY3Q+PHJlY3QgeD0iMzguNSIgeT0iNDYuNSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzQ0NDQ0NCI+CiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSIjZjAxOTIwOyM0NDQ0NDQ7IzQ0NDQ0NCIga2V5VGltZXM9IjA7MC4xMjU7MSIgZHVyPSIxLjE5MDQ3NjE5MDQ3NjE5MDVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgYmVnaW49IjEuMDQxNjY2NjY2NjY2NjY2NXMiIGNhbGNNb2RlPSJkaXNjcmV0ZSI+PC9hbmltYXRlPgo8L3JlY3Q+PHJlY3QgeD0iNTQuNSIgeT0iNDYuNSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzQ0NDQ0NCI+CiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSIjZjAxOTIwOyM0NDQ0NDQ7IzQ0NDQ0NCIga2V5VGltZXM9IjA7MC4xMjU7MSIgZHVyPSIxLjE5MDQ3NjE5MDQ3NjE5MDVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgYmVnaW49IjAuNDQ2NDI4NTcxNDI4NTcxNHMiIGNhbGNNb2RlPSJkaXNjcmV0ZSI+PC9hbmltYXRlPgo8L3JlY3Q+PHJlY3QgeD0iMzguNSIgeT0iNTQuNSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzQ0NDQ0NCI+CiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSIjZjAxOTIwOyM0NDQ0NDQ7IzQ0NDQ0NCIga2V5VGltZXM9IjA7MC4xMjU7MSIgZHVyPSIxLjE5MDQ3NjE5MDQ3NjE5MDVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgYmVnaW49IjAuODkyODU3MTQyODU3MTQyOHMiIGNhbGNNb2RlPSJkaXNjcmV0ZSI+PC9hbmltYXRlPgo8L3JlY3Q+PHJlY3QgeD0iNDYuNSIgeT0iNTQuNSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzQ0NDQ0NCI+CiAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSIjZjAxOTIwOyM0NDQ0NDQ7IzQ0NDQ0NCIga2V5VGltZXM9IjA7MC4xMjU7MSIgZHVyPSIxLjE5MDQ3NjE5MDQ3NjE5MDVzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgYmVnaW49IjAuNzQ0MDQ3NjE5MDQ3NjE5cyIgY2FsY01vZGU9ImRpc2NyZXRlIj48L2FuaW1hdGU+CjwvcmVjdD48cmVjdCB4PSI1NC41IiB5PSI1NC41IiB3aWR0aD0iNyIgaGVpZ2h0PSI3IiBmaWxsPSIjNDQ0NDQ0Ij4KICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJmaWxsIiB2YWx1ZXM9IiNmMDE5MjA7IzQ0NDQ0NDsjNDQ0NDQ0IiBrZXlUaW1lcz0iMDswLjEyNTsxIiBkdXI9IjEuMTkwNDc2MTkwNDc2MTkwNXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBiZWdpbj0iMC41OTUyMzgwOTUyMzgwOTUycyIgY2FsY01vZGU9ImRpc2NyZXRlIj48L2FuaW1hdGU+CjwvcmVjdD4KPCEtLSBbbGRpb10gZ2VuZXJhdGVkIGJ5IGh0dHBzOi8vbG9hZGluZy5pby8gLS0+PC9zdmc+");z-index:98;background-repeat:no-repeat;background-position:center;background-size:200px}.main-wrapper{opacity:0;transition:opacity 0.3s}@font-face{font-family:'BenchNine';src:url("fonts/BenchNine-Bold.woff2") format("woff2");font-weight:bold;font-style:normal;font-display:swap}@font-face{font-family:'BenchNine';src:url("fonts/BenchNine-Regular.woff2") format("woff2");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:'Lato';src:url("fonts/Lato-Bold.woff2") format("woff2");font-weight:bold;font-style:normal;font-display:swap}@font-face{font-family:'Lato';src:url("fonts/Lato-Regular.woff2") format("woff2");font-weight:normal;font-style:normal;font-display:swap}@font-face{font-family:'Lato';src:url("fonts/Lato-Semibold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.no-gutters{margin-right:0;margin-left:0}.no-gutters>.col,.no-gutters>[class*="col-"]{padding-right:0;padding-left:0}.gap-15{margin-right:-7.5px;margin-left:-7.5px}.gap-15>.col,.gap-15>[class*="col-"]{padding-right:7.5px;padding-left:7.5px}.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col,.col-auto,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm,.col-sm-auto,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md,.col-md-auto,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg,.col-lg-auto,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl,.col-xl-auto{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.col{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}@media (min-width: 576px){.col-sm{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-sm-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-sm-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-sm-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-sm-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-sm-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-sm-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-sm-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-sm-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-sm-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-sm-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-sm-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-sm-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-sm-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}}@media (min-width: 768px){.container{max-width:720px}.col-md{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-md-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-md-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-md-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-md-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-md-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-md-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-md-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-md-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-md-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-md-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-md-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-md-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}.gap-40{margin-right:-20px;margin-left:-20px}.gap-40>.col,.gap-40>[class*="col-"]{padding-right:20px;padding-left:20px}}@media (min-width: 992px){.container{max-width:960px}.gap-60{margin-right:-30px;margin-left:-30px}.gap-60>.col,.gap-60>[class*="col-"]{padding-right:30px;padding-left:30px}.col-lg{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-lg-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-lg-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-lg-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-lg-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-lg-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-lg-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-lg-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-lg-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-lg-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-lg-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-lg-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-lg-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-lg-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}}@media (min-width: 1200px){.container{max-width:1140px}.col-xl{-ms-flex-preferred-size:0;flex-basis:0;-ms-flex-positive:1;flex-grow:1;max-width:100%}.col-xl-auto{-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}.col-xl-1{-ms-flex:0 0 8.333333%;flex:0 0 8.333333%;max-width:8.333333%}.col-xl-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-xl-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-xl-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-xl-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-xl-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-xl-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}.col-xl-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}.col-xl-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.col-xl-10{-ms-flex:0 0 83.333333%;flex:0 0 83.333333%;max-width:83.333333%}.col-xl-11{-ms-flex:0 0 91.666667%;flex:0 0 91.666667%;max-width:91.666667%}.col-xl-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}}*,*::before,*::after{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{margin:0;line-height:1.2;font-family:"Lato",sans-serif}a{text-decoration:none;color:#343434}h1,h2,h3,h4,h5,h6{margin:0}ol,ul,dl{margin-top:0;margin-bottom:1rem}svg{overflow:hidden;vertical-align:middle;height:16px}img[data-src]:not(.fade-in){background-color:#f1f1f1}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.breaking-news{border-bottom:1px solid #f4f4f4;font-size:14px}.breaking-news__title{font-weight:700;color:#343434}@media (max-width: 767px){.breaking-news__title{font-size:0}}.headline .post-title{font-size:16px}.headline .post-title a{color:#fff}.headline .post-featured .post-title{font-size:22px}@media (max-width: 767px){.headline .post-featured .post-title{font-size:22px}}.radio-box__text{z-index:1;width:100%;max-width:140px;margin-right:10px}.radio-box__text .btn{color:#fff;margin-bottom:10px;padding:6px 5px 6px 11px;font-size:10px}.radio-box__text .btn img{width:19px}.radio-box__text h4{font-size:18px;line-height:30px}.radio-box__links{padding:20px 0px 3px 30px;border-top:1px solid rgba(112,112,112,0.4)}.radio-box__links a{color:#fff;font-size:14px;margin-bottom:8px;display:flex;align-items:center;width:175px;height:28px;border:1px solid #F01A22;border-radius:4px;padding-left:8px}.radio-box__links a svg{width:14px;height:16px;fill:#f01920;margin-right:8px}.main-header{width:100%;position:relative;background:#fff;transition:all 0.3s}.main-header.header-fixed{position:fixed;z-index:99}.top-nav{border-bottom:1px solid #e8e8e8;padding:8px 0px 7px}.top-nav .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}.top-nav__date{font-size:13px;color:#828282}.top-nav__social .social-item{width:25px;height:25px;margin:0 0 0 20px}.top-nav__social .social-item svg{fill:#828282}.navbar-primary{border-bottom:2px solid #e8e8e8;box-shadow:0px 3px 4px #00000017}.navbar-header{display:flex;align-items:center;padding:10px 0px;border-bottom:1px solid #e8e8e8}.navbar-toggle{display:none;cursor:pointer;line-height:0}.navbar-brand{width:263px;height:50px;display:inline-block;text-align:center}.navbar-brand img{height:100%;width:100%;object-fit:contain;object-position:left}#target-element-left{margin-left:auto}#target-element-left ul.navbar-nav{overflow:hidden}.navbar-nav{display:flex;margin-left:auto;margin-bottom:0;padding:0;list-style:none;font-family:"BenchNine",courier new,sans-serif;font-weight:bold;text-transform:uppercase;overflow:hidden}.navbar-nav .menu-item{margin:0 20px;font-size:22px;letter-spacing:0.0295454545em}.navbar-nav .menu-item a{display:block}.navbar-nav .menu-item img,.navbar-nav .menu-item amp-img{width:20px;height:15px;margin-right:5px;display:none}.navbar-nav .menu-item amp-img img{margin-right:0}.navbar-nav .menu-item a{color:#242424;transition:all 0.3s}.navbar-nav .menu-item a:hover{color:#f01920}.navbar-nav .menu-item.current-menu-item a{color:#f01920}.nav-mobile{margin-left:auto}.close-mobile{padding:15px 10px 20px;display:none;cursor:pointer}.close-mobile svg{height:25px}.navbar-search{margin-left:26px;position:relative}.navbar-search__icon{width:15px;display:block;line-height:0;cursor:pointer}.navbar-search__icon svg{max-height:15px}.navbar-search__form{display:none;position:absolute;right:-10px;top:calc(100% + 10px);padding:20px;background:#fff;border:1px solid #e8e8e8;box-shadow:0px 3px 4px #00000017;border-top:2px solid #f01920}.navbar-search__form form{display:flex}.navbar-search__form::after{content:"";position:absolute;top:-14px;border:7px solid transparent;border-bottom-color:#f01920;right:10px}.navbar-search__form input{padding:5px 10px;border:1px solid #e8e8e8}.navbar-search__form input:focus{outline:none}.navbar-search__form button{background:#000;color:#fff;border:none;font-size:14px;padding:5px 10px}.navbar-search--show .navbar-search__form{display:block}.navbar-menu .navbar-nav{padding:15px 0px 16px;font-family:"Lato",sans-serif;font-weight:600;text-transform:capitalize;justify-content:center;overflow:auto}.navbar-menu .navbar-nav .menu-item{font-size:14px;letter-spacing:0.0261538462em;margin:0 14px;white-space:nowrap}.navbar-menu .navbar-nav .menu-item a{color:#656565;transition:all 0.3s}.navbar-menu .navbar-nav .menu-item a:hover{color:#f01920}.navbar-menu .navbar-nav .menu-item:first-child{margin-left:0}.navbar-menu .navbar-nav .menu-item:last-child{margin-right:0}.navbar-menu .close-mobile{display:none}.scrolled-down{transform:translateY(-30px)}.scrolled-down .container{max-width:100%;padding:0}.scrolled-down .top-nav__social{position:absolute;bottom:20px;right:15px}.scrolled-down .navbar-brand{position:absolute;left:69px;height:35px;width:180px}.scrolled-down .navbar-menu{position:fixed;width:100%;max-width:300px;height:100vh;background-color:#fff;left:0;top:30px;opacity:0;transform:translateX(-100%);transition:transform 0.3s;z-index:99}.scrolled-down .navbar-menu .close-mobile{display:block;padding:15px 15px 0}.scrolled-down .navbar-menu .navbar-nav{flex-direction:column}.scrolled-down .navbar-menu .navbar-nav .menu-item{margin:0 15px 15px}.scrolled-down .navbar-menu.open{transform:translateX(0);opacity:1}.scrolled-down .navbar-toggle{display:block;position:absolute;margin-left:15px;left:0;bottom:27px}.scrolled-down .navbar-header{justify-content:center;padding:15px 0;border:0}.scrolled-down .navbar-header .nav-mobile{margin-left:0}.scrolled-down .navbar-search{position:absolute;left:45px;margin-left:0;bottom:27px}.scrolled-down .navbar-search__form{right:unset;left:-10px}.scrolled-down .navbar-search__form::after{right:unset;left:8px}.scrolled-down .backdrop{top:30px}.backdrop{position:fixed;height:100vh;width:100vw;top:0;left:0;background:rgba(0,0,0,0.5);z-index:1}@media (max-width: 1199px){.navbar-nav .menu-item{margin:0 20px}.navbar-menu .navbar-nav .menu-item{margin:0 10px}}@media (max-width: 991px){.navbar-brand{width:185px;height:35px}.navbar-nav .menu-item{font-size:18px;margin:0 10px}.navbar-search{margin-left:10px}.navbar-menu .navbar-nav{justify-content:flex-start}.top-nav__social .social-item{width:15px;height:24px}.scrolled-down .navbar-brand{width:130px;left:64px}.scrolled-down .navbar-toggle{bottom:22px}.scrolled-down .navbar-search{bottom:22px}.scrolled-down .top-nav__social{bottom:17px}}@media (max-width: 767px){.top-nav{display:none}.navbar-primary{box-shadow:none}.navbar-primary .container{padding:0}.navbar-header{justify-content:space-between;padding:8px 15px 7px}.navbar-header .navbar-nav{display:none}.navbar-header.mobile-responsive .navbar-nav{display:block}.navbar-header.mobile-responsive .nav-mobile{display:block;position:fixed;background:#fff;height:100vh;transform:translateX(-100%);transition:transform 0.3s;width:100%;max-width:250px;top:0;left:0;z-index:2}.navbar-header.mobile-responsive.open .nav-mobile{transform:translateX(0)}.navbar-toggle{display:block;width:15px;line-height:0}.navbar-toggle svg{max-height:14px}.navbar-brand,.navbar-brand amp-img{height:32px}.navbar-brand img,.navbar-brand amp-img img{object-position:center}.close-mobile{display:block}.navbar-nav.main-menu{left:0;z-index:100;top:0;width:100%;max-width:250px;flex-direction:column}.navbar-nav.main-menu .menu-item{padding:8px 10px;margin:0}.navbar-nav.main-menu .menu-item img,.navbar-nav.main-menu .menu-item amp-img{display:inline-block}.navbar-search{margin-left:0}.navbar-menu{padding:0 15px;background:#f9f9f9}.navbar-menu .navbar-nav{padding:12px 0px}.mobile-sidebar{width:100%;max-width:250px;background-color:#fff}}.social-wrapper{display:flex}.social-item{width:35px;height:35px;margin:0 10px}.social-item:first-child{margin-left:0}.social-item--circle{border-radius:50%;background-color:#828282;display:flex;justify-content:center;align-items:center}.social-item--circle a{line-height:0}.social-item--circle svg{fill:#fff}.social-item--circle.amp-social-share-facebook{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgNTEyIiBzdHlsZT0iZmlsbDojNDE1RkE4Ij48cGF0aCBkPSJNMjc5LjE0IDI4OGwxNC4yMi05Mi42NmgtODguOTF2LTYwLjEzYzAtMjUuMzUgMTIuNDItNTAuMDYgNTIuMjQtNTAuMDZoNDAuNDJWNi4yNlMyNjAuNDMgMCAyMjUuMzYgMGMtNzMuMjIgMC0xMjEuMDggNDQuMzgtMTIxLjA4IDEyNC43MnY3MC42MkgyMi44OVYyODhoODEuMzl2MjI0aDEwMC4xN1YyODh6Ii8+PC9zdmc+");background-color:#fff;border:1px solid #E8E8E8;background-size:11px}.social-item--circle.amp-social-share-twitter{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZmlsbDogIzdDQzZGNSI+PHBhdGggZD0iTTQ1OS4zNyAxNTEuNzE2Yy4zMjUgNC41NDguMzI1IDkuMDk3LjMyNSAxMy42NDUgMCAxMzguNzItMTA1LjU4MyAyOTguNTU4LTI5OC41NTggMjk4LjU1OC01OS40NTIgMC0xMTQuNjgtMTcuMjE5LTE2MS4xMzctNDcuMTA2IDguNDQ3Ljk3NCAxNi41NjggMS4yOTkgMjUuMzQgMS4yOTkgNDkuMDU1IDAgOTQuMjEzLTE2LjU2OCAxMzAuMjc0LTQ0LjgzMi00Ni4xMzItLjk3NS04NC43OTItMzEuMTg4LTk4LjExMi03Mi43NzIgNi40OTguOTc0IDEyLjk5NSAxLjYyNCAxOS44MTggMS42MjQgOS40MjEgMCAxOC44NDMtMS4zIDI3LjYxNC0zLjU3My00OC4wODEtOS43NDctODQuMTQzLTUxLjk4LTg0LjE0My0xMDIuOTg1di0xLjI5OWMxMy45NjkgNy43OTcgMzAuMjE0IDEyLjY3IDQ3LjQzMSAxMy4zMTktMjguMjY0LTE4Ljg0My00Ni43ODEtNTEuMDA1LTQ2Ljc4MS04Ny4zOTEgMC0xOS40OTIgNS4xOTctMzcuMzYgMTQuMjk0LTUyLjk1NCA1MS42NTUgNjMuNjc1IDEyOS4zIDEwNS4yNTggMjE2LjM2NSAxMDkuODA3LTEuNjI0LTcuNzk3LTIuNTk5LTE1LjkxOC0yLjU5OS0yNC4wNCAwLTU3LjgyOCA0Ni43ODItMTA0LjkzNCAxMDQuOTM0LTEwNC45MzQgMzAuMjEzIDAgNTcuNTAyIDEyLjY3IDc2LjY3IDMzLjEzNyAyMy43MTUtNC41NDggNDYuNDU2LTEzLjMyIDY2LjU5OS0yNS4zNC03Ljc5OCAyNC4zNjYtMjQuMzY2IDQ0LjgzMy00Ni4xMzIgNTcuODI3IDIxLjExNy0yLjI3MyA0MS41ODQtOC4xMjIgNjAuNDI2LTE2LjI0My0xNC4yOTIgMjAuNzkxLTMyLjE2MSAzOS4zMDgtNTIuNjI4IDU0LjI1M3oiLz48L3N2Zz4=");background-color:#fff;border:1px solid #E8E8E8;background-size:16px}.social-item--circle.amp-social-share-whatsapp{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIiBzdHlsZT0iZmlsbDojMzBCQTQ2Ij48cGF0aCBkPSJNMzgwLjkgOTcuMUMzMzkgNTUuMSAyODMuMiAzMiAyMjMuOSAzMmMtMTIyLjQgMC0yMjIgOTkuNi0yMjIgMjIyIDAgMzkuMSAxMC4yIDc3LjMgMjkuNiAxMTFMMCA0ODBsMTE3LjctMzAuOWMzMi40IDE3LjcgNjguOSAyNyAxMDYuMSAyN2guMWMxMjIuMyAwIDIyNC4xLTk5LjYgMjI0LjEtMjIyIDAtNTkuMy0yNS4yLTExNS02Ny4xLTE1N3ptLTE1NyAzNDEuNmMtMzMuMiAwLTY1LjctOC45LTk0LTI1LjdsLTYuNy00LTY5LjggMTguM0w3MiAzNTkuMmwtNC40LTdjLTE4LjUtMjkuNC0yOC4yLTYzLjMtMjguMi05OC4yIDAtMTAxLjcgODIuOC0xODQuNSAxODQuNi0xODQuNSA0OS4zIDAgOTUuNiAxOS4yIDEzMC40IDU0LjEgMzQuOCAzNC45IDU2LjIgODEuMiA1Ni4xIDEzMC41IDAgMTAxLjgtODQuOSAxODQuNi0xODYuNiAxODQuNnptMTAxLjItMTM4LjJjLTUuNS0yLjgtMzIuOC0xNi4yLTM3LjktMTgtNS4xLTEuOS04LjgtMi44LTEyLjUgMi44LTMuNyA1LjYtMTQuMyAxOC0xNy42IDIxLjgtMy4yIDMuNy02LjUgNC4yLTEyIDEuNC0zMi42LTE2LjMtNTQtMjkuMS03NS41LTY2LTUuNy05LjggNS43LTkuMSAxNi4zLTMwLjMgMS44LTMuNy45LTYuOS0uNS05LjctMS40LTIuOC0xMi41LTMwLjEtMTcuMS00MS4yLTQuNS0xMC44LTkuMS05LjMtMTIuNS05LjUtMy4yLS4yLTYuOS0uMi0xMC42LS4yLTMuNyAwLTkuNyAxLjQtMTQuOCA2LjktNS4xIDUuNi0xOS40IDE5LTE5LjQgNDYuMyAwIDI3LjMgMTkuOSA1My43IDIyLjYgNTcuNCAyLjggMy43IDM5LjEgNTkuNyA5NC44IDgzLjggMzUuMiAxNS4yIDQ5IDE2LjUgNjYuNiAxMy45IDEwLjctMS42IDMyLjgtMTMuNCAzNy40LTI2LjQgNC42LTEzIDQuNi0yNC4xIDMuMi0yNi40LTEuMy0yLjUtNS0zLjktMTAuNS02LjZ6Ii8+PC9zdmc+");background-color:#fff;border:1px solid #E8E8E8;background-size:16px}.social-item--circle.amp-social-share-email{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZmlsbDojMjY0MEJGIj48cGF0aCBkPSJNNTAyLjMgMTkwLjhjMy45LTMuMSA5LjctLjIgOS43IDQuN1Y0MDBjMCAyNi41LTIxLjUgNDgtNDggNDhINDhjLTI2LjUgMC00OC0yMS41LTQ4LTQ4VjE5NS42YzAtNSA1LjctNy44IDkuNy00LjcgMjIuNCAxNy40IDUyLjEgMzkuNSAxNTQuMSAxMTMuNiAyMS4xIDE1LjQgNTYuNyA0Ny44IDkyLjIgNDcuNiAzNS43LjMgNzItMzIuOCA5Mi4zLTQ3LjYgMTAyLTc0LjEgMTMxLjYtOTYuMyAxNTQtMTEzLjd6TTI1NiAzMjBjMjMuMi40IDU2LjYtMjkuMiA3My40LTQxLjQgMTMyLjctOTYuMyAxNDIuOC0xMDQuNyAxNzMuNC0xMjguNyA1LjgtNC41IDkuMi0xMS41IDkuMi0xOC45di0xOWMwLTI2LjUtMjEuNS00OC00OC00OEg0OEMyMS41IDY0IDAgODUuNSAwIDExMnYxOWMwIDcuNCAzLjQgMTQuMyA5LjIgMTguOSAzMC42IDIzLjkgNDAuNyAzMi40IDE3My40IDEyOC43IDE2LjggMTIuMiA1MC4yIDQxLjggNzMuNCA0MS40eiIvPjwvc3ZnPg==");background-color:#fff;border:1px solid #E8E8E8;background-size:16px}.social-item--fb{background-color:#fff;border:1px solid #E8E8E8}.social-item--fb svg{fill:#415FA8}.social-item--twitter{background-color:#fff;border:1px solid #E8E8E8}.social-item--twitter svg{fill:#7CC6F5}.social-item--whatsapp{background-color:#fff;border:1px solid #E8E8E8}.social-item--whatsapp svg{fill:#30BA46}.social-item--mail{background-color:#fff;border:1px solid #E8E8E8}.social-item--mail svg{fill:#2640BF}.social-item svg{height:16px}
+
+    /*# sourceMappingURL=critical-style.min.css.map */
+</style>
+<style type="text/css">
+					.site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+				</style>
+		<script>            dataLayer = [{
+                "breadcrumb_detail": "Homepage",
+                "content_category": "Homepage"
+            }];</script>
+
+		<style type="text/css" id="wp-custom-css">
+			.side-logo {display: none !important;}
+	</style>
+		<script>
+					dataLayer = [{
+						"breadcrumb_detail": "Homepage",
+						"content_category": "Home"
+					}];
+				</script>
+
+				
+<body class="home page-template-default page page-id-152 wp-custom-logo elementor-default elementor-kit-507851">
+<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">if(typeof ewww_webp_supported==="undefined"){var ewww_webp_supported=!1}if(ewww_webp_supported){document.body.classList.add("webp-support")}</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4NG68Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrapper">
+		
+	<header id="main-header" class="main-header header-fixed">
+		<div class="top-nav">
+			<div class="container">
+				<div class="top-nav__date">Sabtu, 25 Oktober 2025</div>
+				<div class="social-wrapper top-nav__social">
+					<span class="social-item"><a target="_blank" href="https://www.facebook.com/e100ss/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></a></span>
+<span class="social-item"><a target="_blank" href="https://www.instagram.com/suarasurabayamedia/?hl=id"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></span>
+<span class="social-item"><a target="_blank" href="https://twitter.com/e100ss"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a></span>
+<span class="social-item"><a target="_blank" href="https://www.youtube.com/channel/UCBVA5QjSUukGuoWutAKyq5w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a></span>
+<span class="social-item"><a target="_blank" href="https://www.suarasurabaya.net/rss/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg></a></span>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar-primary">
+			<div class="container">
+				<div class="navbar-header mobile-responsive">
+					<div class="navbar-toggle">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>					</div>
+
+					<a href="https://www.suarasurabaya.net/" class="navbar-brand" rel="home" aria-current="page"><img width="276" height="55" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="custom-logo ewww_webp" alt="Suara Surabaya" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2021/02/cropped-cropped-LOGO-DEFAULT.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2021/02/cropped-cropped-LOGO-DEFAULT.jpg.webp" data-eio="j"><noscript><img width="276" height="55" src="https://www.suarasurabaya.net/wp-content/uploads/2021/02/cropped-cropped-LOGO-DEFAULT.jpg" class="custom-logo" alt="Suara Surabaya" decoding="async" loading="lazy" /></noscript></a>
+					<div class="nav-mobile">
+						<div class="close-mobile">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>						</div>
+						<ul id="mobile-menu" class="navbar-nav main-menu"><li id="menu-item-110" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-110"><a href="https://www.suarasurabaya.net/" aria-current="page">Home</a></li>
+<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://www.suarasurabaya.net/news/">News</a></li>
+<li id="menu-item-113" class="menu-item menu-item-type-post_type_archive menu-item-object-potret menu-item-113"><a href="https://www.suarasurabaya.net/potret-kelana-kota/">Potret Kelana Kota</a></li>
+<li id="menu-item-150" class="menu-item menu-item-type-post_type_archive menu-item-object-video menu-item-150"><a href="https://www.suarasurabaya.net/video/">Video</a></li>
+<li id="menu-item-151" class="menu-item menu-item-type-post_type_archive menu-item-object-insert menu-item-151"><a href="https://www.suarasurabaya.net/radio/">Radio</a></li>
+</ul>					</div>
+
+								<div class="navbar-search">
+			<a class="navbar-search__icon">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>			</a>
+			<a class="navbar-search__icon close" style="display: none">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>			</a>
+			<div class="navbar-search__form">
+				<form action="https://www.suarasurabaya.net/">
+					<input type="search" value="" name="s">
+					<button type="submit" value="submit">Search</button>
+				</form>
+			</div>
+		</div>
+						</div>
+								<div class="navbar-menu">
+					<div class="close-mobile">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>					</div>
+					<ul id="primary-menu" class="navbar-nav sub-menu scroll-custom"><li id="menu-item-180548" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180548"><a href="https://www.suarasurabaya.net/about/">Tentang Kami</a></li>
+<li id="menu-item-133379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-133379"><a href="https://www.suarasurabaya.net/kelanakota/">Kelana Kota</a></li>
+<li id="menu-item-831955" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-831955"><a href="https://www.suarasurabaya.net/catatan-pemred/">Catatan Pemred</a></li>
+<li id="menu-item-133381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-133381"><a href="https://www.suarasurabaya.net/politik/">Politik</a></li>
+<li id="menu-item-315291" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-315291"><a href="https://www.suarasurabaya.net/ekonomibisnis/">Ekonomi Bisnis</a></li>
+<li id="menu-item-133380" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-133380"><a href="https://www.suarasurabaya.net/olahraga/">Olahraga</a></li>
+<li id="menu-item-315293" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-315293"><a href="https://www.suarasurabaya.net/jazztraffic/">Jazz Traffic</a></li>
+<li id="menu-item-133383" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-133383"><a href="https://www.suarasurabaya.net/senggang/">Senggang</a></li>
+<li id="menu-item-508703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-508703"><a href="https://www.suarasurabaya.net/redaksi/">Redaksi</a></li>
+</ul>				</div>
+							</div>
+		</nav>
+	</header>
+	
+	<main class="main-wrapper">
+
+		
+		<div class="container">
+
+							<!-- Floating Live Streaming BTN -->
+				<div class="live-stream">
+					<a href="https://www.suarasurabaya.net/radio/">
+						<img src="images/gifdasdasd.gif" alt="">
+					</a>
+				</div>
+
+				
+<div class="breaking-news">
+	<div class="row">
+		<div class="col-auto pr-0">
+			<div class="breaking-news__nav">
+				<span class="breaking-news__title">
+					BREAKING NEWS
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z"></path></svg>					</span>
+				</span>
+				<div class="arrow">
+					<span class="arrow-left" id="nav-news--left">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>					</span>
+					<span class="arrow-right" id="nav-news--right">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>					</span>
+				</div>
+			</div>
+		</div>
+		<div class="col pl-0">
+			<div class="breaking-news__content" id="breaking-news--slider">
+														<div class="breaking-news__item ">
+						<a href="https://www.suarasurabaya.net/olahraga/2025/15-makanan-yang-sebenarnya-tak-perlu-disimpan-di-kulkas/" class="limit-text line-1">15 Makanan yang Sebenarnya Tak Perlu Disimpan di Kulkas</a>
+					</div>
+														<div class="breaking-news__item ">
+						<a href="https://www.suarasurabaya.net/olahraga/2025/noc-indonesia-temui-ioc-di-swiss-bahas-dampak-pembatalan-visa-atlet-israel/" class="limit-text line-1">NOC Indonesia Temui IOC di Swiss, Bahas Dampak Pembatalan Visa Atlet Israel</a>
+					</div>
+														<div class="breaking-news__item ">
+						<a href="https://www.suarasurabaya.net/politik/2025/trump-menuju-asia-untuk-perundingan-perdagangan-dengan-xi-jinping-buka-peluang-bertemu-kim-jong-un/" class="limit-text line-1">Trump Menuju Asia untuk Perundingan Perdagangan dengan Xi Jinping, Buka Peluang Bertemu Kim Jong Un</a>
+					</div>
+														<div class="breaking-news__item ">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/indonesia-sambut-timor-leste-jadi-anggota-penuh-asean/" class="limit-text line-1">Indonesia Sambut Timor Leste Jadi Anggota Penuh ASEAN</a>
+					</div>
+														<div class="breaking-news__item ">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/empat-orang-meninggal-dalam-kecelakaan-bus-pariwisata-di-tol-pemalang/" class="limit-text line-1">Empat Orang Meninggal Dalam Kecelakaan Bus Pariwisata di Tol Pemalang</a>
+					</div>
+							</div>
+		</div>
+	</div>
+</div>
+
+
+				
+					<div class="component-box">
+						<div class="ads-wrapper">
+							<div class="ads">
+								<!--<a href="https://yamahafriends.yamahastsjonline.com/" target="_blank"><img src="https://www.suarasurabaya.net/wp-content/uploads/2024/06/filano-970-x-250-piksel.gif" border="0"></a>--><!--<a href="https://shope.ee/9A1VWtmpsC" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2024/03/atlas-970x250-31MAR2024.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2024/03/atlas-970x250-31MAR2024.jpg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2024/03/atlas-970x250-31MAR2024.jpg" border="0"></noscript></a>-->
+<!-- Leaderboard -->
+<div id="div-gpt-ad-leaderboard">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-leaderboard'); });
+  </script>
+</div>
+<!-- Leaderboard -->							</div>
+						</div>
+					</div>
+
+				
+			
+	<div class="row">
+		<div class="col col-main-content">
+			
+
+	<div class="component-box">
+		<div class="headline">
+			<div class="headline-text">
+
+				
+					
+					
+						
+						<div class="post post-featured">
+															<div class="component-title component-title--sm component-title--white">
+									Headline
+								</div>
+																					<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/kelanakota/2025/nyamar-jadi-wanita-berhijab-mantan-karyawan-spbu-di-surabaya-gasak-rp345-juta/">Nyamar Jadi Wanita Berhijab, Mantan Karyawan SPBU di Surabaya Gasak Rp345 Juta</a>
+							</h3>
+							<div class="post-excerpt">
+								<p>AZ (26) warga Surabaya menggasak uang sebesar Rp345 juta di brankas SPBU kawasan Tegalsari dengan menyamar jadi wanita berhijab pada Senin (13/10/2025) lalu.</p>
+							</div>
+						</div>
+
+					
+				
+					
+					
+						
+						<div class="post">
+														<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/kelanakota/2025/puluhan-tunanetra-mengaji-bersama-dan-bagikan-santunan-di-monkasel-surabaya/">Puluhan Tunanetra Mengaji Bersama dan Bagikan Santunan di Monkasel Surabaya</a>
+							</h3>
+						</div>
+
+					
+				
+					
+					
+						
+						<div class="post">
+														<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/kelanakota/2025/peneliti-minta-penghentian-aktivitas-bakar-sampah-untuk-atasi-hujan-mikroplastik/">Peneliti Minta Penghentian Aktivitas Bakar Sampah untuk Atasi Hujan Mikroplastik</a>
+							</h3>
+						</div>
+
+					
+				
+					
+					
+						
+						<div class="post">
+														<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/pemprov-jatim-dan-jateng-tandatangani-mou-targetkan-sektor-ekonomi-baru/">Pemprov Jatim dan Jateng Tandatangani MoU, Targetkan Sektor Ekonomi Baru</a>
+							</h3>
+						</div>
+
+					
+				
+					
+					
+						
+						<div class="post">
+														<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/politik/2025/maafkan-pembuat-meme-dirinya-bahlil-minta-sayap-partai-golkar-cabut-laporan/">Maafkan Pembuat Meme Dirinya, Bahlil Minta Sayap Partai Golkar Cabut Laporan </a>
+							</h3>
+						</div>
+
+					
+				
+				
+			</div>
+			<div class="headline-thumb">
+																					<div class="headline-img">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/nyamar-jadi-wanita-berhijab-mantan-karyawan-spbu-di-surabaya-gasak-rp345-juta/">
+								<img width="840" height="493" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-single size-ss-single wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-5.04.32-PM-840x493.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-5.04.32-PM-840x493.jpeg.webp" data-eio="j"><noscript><img width="840" height="493" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-5.04.32-PM-840x493.jpeg" class="attachment-ss-single size-ss-single wp-post-image" alt="" decoding="async" loading="lazy" /></noscript>							</a>
+						</div>
+																			<div class="headline-sstoday">
+					<div class="component-title component-title--sm component-title--green">
+						SS Today
+						<a href="https://www.suarasurabaya.net/fokus-arsip/" class="title-link">Lainnya
+							<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg>						</a>
+					</div>
+					<div class="row gap-15">
+																					<div class="col-xl-6 col-lg-12 col-6">
+									<div class="post">
+										<div class="post-img">
+											<a href="https://www.suarasurabaya.net/fokus/pesta-gay-di-surabaya/">
+												<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy" alt="" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-18.32.48-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-18.32.48-300x195.jpeg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-18.32.48-300x195.jpeg" loading="lazy" alt=""></noscript>
+											</a>
+										</div>
+										<div class="post-content">
+											<h3 class="post-title">
+												<a href="https://www.suarasurabaya.net/fokus/pesta-gay-di-surabaya/">Pesta Gay di Surabaya</a>
+											</h3>
+										</div>
+									</div>
+								</div>
+																												<div class="col-xl-6 col-lg-12 col-6">
+									<div class="post">
+										<div class="post-img">
+											<a href="https://www.suarasurabaya.net/fokus/ponpes-di-sidoarjo-ambruk/">
+												<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy" alt="" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-4.49.35-PM-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-4.49.35-PM-300x195.jpeg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-4.49.35-PM-300x195.jpeg" loading="lazy" alt=""></noscript>
+											</a>
+										</div>
+										<div class="post-content">
+											<h3 class="post-title">
+												<a href="https://www.suarasurabaya.net/fokus/ponpes-di-sidoarjo-ambruk/">Ponpes di Sidoarjo Ambruk</a>
+											</h3>
+										</div>
+									</div>
+								</div>
+																		</div>
+				</div>
+			</div>
+
+							<div class="headline-sstoday">
+					<div class="row gap-15">
+																					<div class="col-6 col-lg-3">
+									<div class="post">
+										<div class="post-img">
+											<a href="https://www.suarasurabaya.net/fokus/mutilasi-dibuang-di-pacet/">
+												<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy" alt="" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-08-at-10.40.48-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-08-at-10.40.48-300x195.jpeg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-08-at-10.40.48-300x195.jpeg" loading="lazy" alt=""></noscript>
+											</a>
+										</div>
+										<div class="post-content">
+											<h3 class="post-title">
+												<a href="https://www.suarasurabaya.net/fokus/mutilasi-dibuang-di-pacet/">Mutilasi Dibuang di Pacet</a>
+											</h3>
+										</div>
+									</div>
+								</div>
+																												<div class="col-6 col-lg-3">
+									<div class="post">
+										<div class="post-img">
+											<a href="https://www.suarasurabaya.net/fokus/ojol-dilindas-rantis/">
+												<img src="images/Screenshot-82-e1756393365122-300x195.jpg" loading="lazy" alt="">
+											</a>
+										</div>
+										<div class="post-content">
+											<h3 class="post-title">
+												<a href="https://www.suarasurabaya.net/fokus/ojol-dilindas-rantis/">Ojol Dilindas Rantis</a>
+											</h3>
+										</div>
+									</div>
+								</div>
+																												<div class="col-6 col-lg-3">
+									<div class="post">
+										<div class="post-img">
+											<a href="https://www.suarasurabaya.net/fokus/demo-buruh-6-tuntutan-nasional/">
+												<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy" alt="" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-28-at-12.05.35-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-28-at-12.05.35-300x195.jpeg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-28-at-12.05.35-300x195.jpeg" loading="lazy" alt=""></noscript>
+											</a>
+										</div>
+										<div class="post-content">
+											<h3 class="post-title">
+												<a href="https://www.suarasurabaya.net/fokus/demo-buruh-6-tuntutan-nasional/">Demo Buruh 6 Tuntutan Nasional</a>
+											</h3>
+										</div>
+									</div>
+								</div>
+																												<div class="col-6 col-lg-3">
+									<div class="post">
+										<div class="post-img">
+											<a href="https://www.suarasurabaya.net/fokus/persebaya-update/">
+												<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy" alt="" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2023/09/persebay-300x195.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2023/09/persebay-300x195.jpg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2023/09/persebay-300x195.jpg" loading="lazy" alt=""></noscript>
+											</a>
+										</div>
+										<div class="post-content">
+											<h3 class="post-title">
+												<a href="https://www.suarasurabaya.net/fokus/persebaya-update/">Persebaya Update</a>
+											</h3>
+										</div>
+									</div>
+								</div>
+																		</div>
+				</div>
+					</div>
+	</div>
+
+	
+<div class="component-box">
+	<div class="ads-wrapper">
+		<div class="ads">
+			<!--<a href="https://bergerak.suarasurabaya.id/" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2022/11/728X90-PENDAFTARAN-SUB-BERGERAK.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2022/11/728X90-PENDAFTARAN-SUB-BERGERAK.jpg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2022/11/728X90-PENDAFTARAN-SUB-BERGERAK.jpg" border="0"></noscript></a>
+<br /> -->
+<!-- Multibanner1 -->
+<div id="div-gpt-ad-multibanner1">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-multibanner1'); });
+  </script>
+</div>
+<!-- Multibanner1 -->		</div>
+	</div>
+</div>
+
+<div class="component-box">
+	<div class="component-title component-title--purple">
+		Potret Kelana Kota
+
+		<a href="https://www.suarasurabaya.net/potret-kelana-kota/" class="title-link">Potret Lainnya
+			<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg></a>
+	</div>
+	<div class="row gap-20">
+												<div class="col-12">
+					<div class="post post-featured">
+						<div class="row">
+							<div class=" col-12 col-lg-auto">
+								<div class="post-img">
+									<a href="https://www.suarasurabaya.net/potret-kelana-kota/tunanetra-surabaya-rayakan-semangat-mengaji-di-monkasel/">
+										<img width="840" height="493" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-single size-ss-single wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-13.11.10-840x493.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-13.11.10-840x493.jpeg.webp" data-eio="j"><noscript><img width="840" height="493" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-13.11.10-840x493.jpeg" class="attachment-ss-single size-ss-single wp-post-image" alt="" decoding="async" loading="lazy" /></noscript>									</a>
+								</div>
+							</div>
+							<div class="col">
+								<h3 class="post-title">
+									<a href="https://www.suarasurabaya.net/potret-kelana-kota/tunanetra-surabaya-rayakan-semangat-mengaji-di-monkasel/">Tunanetra Surabaya Rayakan Semangat Mengaji di Monkasel</a>
+								</h3>
+								<div class="post-date">
+									<span class="post-date__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>									</span>
+									<span class="date">25 Oktober 2025</span> <span class="time">| 20:00 WIB</span>
+								</div>
+								<div class="post-excerpt limit-text"><p>Puluhan penyandang tunanetra mengikuti Festival Tunanetra Mengaji yang digelar di Monumen Kapal Selam (Monkasel) Surabaya, Sabtu (25/10/2025). Kegiatan ini menjadi bentuk apresiasi terhadap perjuangan tunanetra muslim dalam belajar membaca Al-Qur’an Braille, di tengah masih tingginya angka buta huruf Braille di Indonesia.</p>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+															<div class="col-12 col-lg-4">
+					<div class="post md-flex">
+						<div class="post-img">
+							<a href="https://www.suarasurabaya.net/potret-kelana-kota/pemprov-jatim-hadirkan-tabligh-akbar-bersama-gus-iqdam/">
+								<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-300x195.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-300x195.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-170x110.jpeg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-170x110.jpeg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-300x195.jpeg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-22-at-9.51.48-PM-170x110.jpeg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>							</a>
+						</div>
+						<div class="post-content">
+							<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/potret-kelana-kota/pemprov-jatim-hadirkan-tabligh-akbar-bersama-gus-iqdam/">Pemprov Jatim Hadirkan Tabligh Akbar Bersama Gus Iqdam</a>
+							</h3>
+							<div class="post-date">
+								<span class="post-date__icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>								</span>
+								<span class="date">23 Oktober 2025</span> <span class="time">| 08:29 WIB</span>
+							</div>
+						</div>
+					</div>
+				</div>
+															<div class="col-12 col-lg-4">
+					<div class="post md-flex">
+						<div class="post-img">
+							<a href="https://www.suarasurabaya.net/potret-kelana-kota/istigasah-hari-santri-di-pcnu-surabaya-serukan-perkuat-kerukunan/">
+								<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-300x195.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-300x195.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-170x110.jpeg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-170x110.jpeg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-300x195.jpeg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-20.46.15-170x110.jpeg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>							</a>
+						</div>
+						<div class="post-content">
+							<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/potret-kelana-kota/istigasah-hari-santri-di-pcnu-surabaya-serukan-perkuat-kerukunan/">Istigasah Hari Santri di PCNU Surabaya Serukan Perkuat Kerukunan</a>
+							</h3>
+							<div class="post-date">
+								<span class="post-date__icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>								</span>
+								<span class="date">21 Oktober 2025</span> <span class="time">| 21:22 WIB</span>
+							</div>
+						</div>
+					</div>
+				</div>
+															<div class="col-12 col-lg-4">
+					<div class="post md-flex">
+						<div class="post-img">
+							<a href="https://www.suarasurabaya.net/potret-kelana-kota/siswa-sd-cikal-surabaya-belajar-dunia-penyiaran-di-suara-surabaya/">
+								<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-300x195.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-300x195.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-170x110.jpeg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-170x110.jpeg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-300x195.jpeg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-21-at-11.26.43 AM-17-170x110.jpeg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>							</a>
+						</div>
+						<div class="post-content">
+							<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/potret-kelana-kota/siswa-sd-cikal-surabaya-belajar-dunia-penyiaran-di-suara-surabaya/">Siswa SD Cikal Surabaya Belajar Dunia Penyiaran di Suara Surabaya</a>
+							</h3>
+							<div class="post-date">
+								<span class="post-date__icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>								</span>
+								<span class="date">21 Oktober 2025</span> <span class="time">| 21:18 WIB</span>
+							</div>
+						</div>
+					</div>
+				</div>
+						</div>
+
+	
+</div>
+
+<div class="component-box">
+	<div class="ads-wrapper">
+		<div class="ads">
+			<!--<p align="center"><iframe src="https://ssmobile.suarasurabaya.net/rod/porprov/grab_porprov.php" width="715" height="260" title="Skor" style="border:none;overflow: hidden;" noscroll></iframe></p>-->
+<!-- Multibanner2 -->
+<div id="div-gpt-ad-multibanner2">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-multibanner2'); });
+  </script>
+</div>
+<!-- Multibanner2 -->
+<!-- <br />
+<a href="https://bit.ly/SScovid19" target="_blank"><img src="https://www.suarasurabaya.net/wp-content/uploads/2021/01/banner_swab_test_gratis-1.jpg" border="0"></a>-->		</div>
+	</div>
+</div>
+
+<div class="component-box">
+	<div class="component-title component-title--violet">
+		Kelana Kota
+		<a href="https://www.suarasurabaya.net/kelanakota/" class="title-link">Berita Lainnya
+			<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg></a>
+	</div>
+	
+<div class="row gap-20">
+								<div class="col-12">
+				<div class="post post-featured">
+					<div class="row">
+						<div class=" col-12 col-lg-auto">
+							<div class="post-img">
+								<a href="https://www.suarasurabaya.net/kelanakota/2025/triyogi-yuwono-resmi-dilantik-jadi-rektor-baru-unusa/">
+									<img width="840" height="493" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-single size-ss-single wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-9.06.50-PM-840x493.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-9.06.50-PM-840x493.jpeg.webp" data-eio="j"><noscript><img width="840" height="493" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-9.06.50-PM-840x493.jpeg" class="attachment-ss-single size-ss-single wp-post-image" alt="" decoding="async" loading="lazy" /></noscript>								</a>
+							</div>
+						</div>
+						<div class="col">
+							<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/kelanakota/2025/triyogi-yuwono-resmi-dilantik-jadi-rektor-baru-unusa/">Triyogi Yuwono Resmi Dilantik Jadi Rektor Baru Unusa</a>
+							</h3>
+							<div class="post-date">
+								<span class="post-date__icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>								</span>
+								<span class="date">25 Oktober 2025</span> <span class="time">| 21:00 WIB</span>
+							</div>
+							<div class="post-excerpt limit-text"><p>Triyogi Yuwono resmi menjabat sebagai rektor baru Universitas Nahdlatul Ulama Surabaya (Unusa) periode 2025-2030 setelah dilantik Yayasan Rumah Sakit Islam Surabaya (Yarsis) di Unusa B Surabaya, pada Sabtu (25/10/2025).</p>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/termasuk-warga-gaza-palestina-um-surabaya-kukuhkan-927-wisudawan/">
+							<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-300x195.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-300x195.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-170x110.jpeg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-170x110.jpeg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-300x195.jpeg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-25-at-7.14.25-PM-170x110.jpeg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/termasuk-warga-gaza-palestina-um-surabaya-kukuhkan-927-wisudawan/">Termasuk Warga Gaza Palestina, UM Surabaya Kukuhkan 927 Wisudawan</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 19:40 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/indonesia-sambut-timor-leste-jadi-anggota-penuh-asean/">
+							<img width="300" height="195" src="images/Menlu-RI-300x195.webp" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="images/Menlu-RI-300x195.webp 300w, images/Menlu-RI-170x110.webp 170w" sizes="(max-width: 300px) 100vw, 300px">						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/indonesia-sambut-timor-leste-jadi-anggota-penuh-asean/">Indonesia Sambut Timor Leste Jadi Anggota Penuh ASEAN</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 19:20 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/empat-orang-meninggal-dalam-kecelakaan-bus-pariwisata-di-tol-pemalang/">
+							<img width="300" height="195" src="images/Korban-laka-di-tol-Pemalang.jpg-300x195.webp" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="images/Korban-laka-di-tol-Pemalang.jpg-300x195.webp 300w, images/Korban-laka-di-tol-Pemalang.jpg-170x110.webp 170w" sizes="(max-width: 300px) 100vw, 300px">						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/empat-orang-meninggal-dalam-kecelakaan-bus-pariwisata-di-tol-pemalang/">Empat Orang Meninggal Dalam Kecelakaan Bus Pariwisata di Tol Pemalang</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 19:00 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+</div>
+
+<div class="component-box">
+	<div class="ads-wrapper">
+		<div class="ads">
+			<!-- <a href="https://bit.ly/SSOPOPJATIM" target="_blank"><img src="https://www.suarasurabaya.net/wp-content/uploads/2020/10/banner-OPOP-dektop.jpg" border="0"></a>
+<br />-->
+<!-- Multibanner3 -->
+<div id="div-gpt-ad-multibanner3">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-multibanner3'); });
+  </script>
+</div>
+<!-- Multibanner3 -->		</div>
+	</div>
+</div>
+
+<div class="component-box">
+	<div class="component-title component-title--orange">
+		Politik
+		<a href="https://www.suarasurabaya.net/politik/" class="title-link">Berita Lainnya
+			<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg></a>
+	</div>
+	
+<div class="row gap-20">
+								<div class="col-12">
+				<div class="post post-featured">
+					<div class="row">
+						<div class=" col-12 col-lg-auto">
+							<div class="post-img">
+								<a href="https://www.suarasurabaya.net/politik/2025/trump-menuju-asia-untuk-perundingan-perdagangan-dengan-xi-jinping-buka-peluang-bertemu-kim-jong-un/">
+									<img width="840" height="493" src="images/trump-and-xi-make-progress-on-tiktok-deal-plan-to-meet-in-south-korea-e1758359845429-840x493.webp" class="attachment-ss-single size-ss-single wp-post-image" alt="" decoding="async" loading="lazy">								</a>
+							</div>
+						</div>
+						<div class="col">
+							<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/politik/2025/trump-menuju-asia-untuk-perundingan-perdagangan-dengan-xi-jinping-buka-peluang-bertemu-kim-jong-un/">Trump Menuju Asia untuk Perundingan Perdagangan dengan Xi Jinping, Buka Peluang Bertemu Kim Jong Un</a>
+							</h3>
+							<div class="post-date">
+								<span class="post-date__icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>								</span>
+								<span class="date">25 Oktober 2025</span> <span class="time">| 20:00 WIB</span>
+							</div>
+							<div class="post-excerpt limit-text"><p>Donald Trump Presiden Amerika Serikat (AS) pada Sabtu (25/10/2025)bertolak ke Asia untuk melakukan serangkaian perundingan perdagangan berisiko tinggi dengan Xi Jinping Presiden China.</p>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/politik/2025/senator-lia-istifhama-perpres-ojol-harus-jadi-jalan-keadilan-untuk-pengemudi/">
+							<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-300x195.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-300x195.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-300x195.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-170x110.jpeg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-170x110.jpeg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-300x195.jpeg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-300x195.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-24-at-10.25.14-170x110.jpeg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/politik/2025/senator-lia-istifhama-perpres-ojol-harus-jadi-jalan-keadilan-untuk-pengemudi/">Senator Lia Istifhama: Perpres Ojol Harus Jadi Jalan Keadilan untuk Pengemudi</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 18:20 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/politik/2025/idrus-marham-bahlil-lahadalia-tak-akan-mundur-sejengkalpun-jalankan-perintah-presiden-jaga-marwah-negara/">
+							<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-300x195.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-300x195.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-300x195.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-170x110.jpg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-170x110.jpg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-300x195.jpg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251025-WA0082-170x110.jpg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/politik/2025/idrus-marham-bahlil-lahadalia-tak-akan-mundur-sejengkalpun-jalankan-perintah-presiden-jaga-marwah-negara/">Idrus Marham : Bahlil Lahadalia Tak Akan Mundur Sejengkalpun Jalankan Perintah Presiden Jaga Marwah Negara</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 16:00 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/politik/2025/maafkan-pembuat-meme-dirinya-bahlil-minta-sayap-partai-golkar-cabut-laporan/">
+							<img width="300" height="195" src="images/IMG_4890.jpg-300x195.webp" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="images/IMG_4890.jpg-300x195.webp 300w, images/IMG_4890.jpg-170x110.webp 170w" sizes="(max-width: 300px) 100vw, 300px">						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/politik/2025/maafkan-pembuat-meme-dirinya-bahlil-minta-sayap-partai-golkar-cabut-laporan/">Maafkan Pembuat Meme Dirinya, Bahlil Minta Sayap Partai Golkar Cabut Laporan </a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">24 Oktober 2025</span> <span class="time">| 21:26 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+</div>
+
+<div class="component-box">
+	<div class="ads-wrapper">
+		<div class="ads">
+			<!-- Multibanner4 -->
+<div id="div-gpt-ad-multibanner4">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-multibanner4'); });
+  </script>
+</div>
+<!-- Multibanner4 -->		</div>
+	</div>
+</div>
+
+<div class="component-box">
+	<div class="component-title component-title--green-light">
+		Olahraga
+		<a href="https://www.suarasurabaya.net/olahraga/" class="title-link">Berita Lainnya
+			<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg></a>
+	</div>
+	
+<div class="row gap-20">
+								<div class="col-12">
+				<div class="post post-featured">
+					<div class="row">
+						<div class=" col-12 col-lg-auto">
+							<div class="post-img">
+								<a href="https://www.suarasurabaya.net/olahraga/2025/noc-indonesia-temui-ioc-di-swiss-bahas-dampak-pembatalan-visa-atlet-israel/">
+									<img width="840" height="493" src="images/senam-e1760491648413-840x493.jpg" class="attachment-ss-single size-ss-single wp-post-image" alt="" decoding="async" loading="lazy">								</a>
+							</div>
+						</div>
+						<div class="col">
+							<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/olahraga/2025/noc-indonesia-temui-ioc-di-swiss-bahas-dampak-pembatalan-visa-atlet-israel/">NOC Indonesia Temui IOC di Swiss, Bahas Dampak Pembatalan Visa Atlet Israel</a>
+							</h3>
+							<div class="post-date">
+								<span class="post-date__icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>								</span>
+								<span class="date">25 Oktober 2025</span> <span class="time">| 21:40 WIB</span>
+							</div>
+							<div class="post-excerpt limit-text"><p>Raja Sapta Oktohari Ketua Umum NOC Indonesia menyampaikan bahwa pihaknya telah lama meminta waktu untuk bertemu dengan IOC. Pertemuan tersebut dijadwalkan berlangsung pada 28 Oktober 2025.</p>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/olahraga/2025/15-makanan-yang-sebenarnya-tak-perlu-disimpan-di-kulkas/">
+							<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-300x195.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-300x195.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-300x195.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-170x110.jpg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-170x110.jpg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-300x195.jpg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/Tomat-170x110.jpg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/olahraga/2025/15-makanan-yang-sebenarnya-tak-perlu-disimpan-di-kulkas/">15 Makanan yang Sebenarnya Tak Perlu Disimpan di Kulkas</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 21:20 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/olahraga/2025/indra-sjafri-maksimalkan-fifa-match-day-sebagai-persiapan-sea-games-2025/">
+							<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-300x195.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-300x195.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-300x195.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-170x110.jpg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-170x110.jpg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-300x195.jpg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-03-at-22.15.43_0c28ffd8-170x110.jpg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/olahraga/2025/indra-sjafri-maksimalkan-fifa-match-day-sebagai-persiapan-sea-games-2025/">Indra Sjafri Maksimalkan FIFA Match Day Sebagai Persiapan SEA Games 2025</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 17:00 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/olahraga/2025/pecco-bagnaia-kembali-ke-jalur-kemenangan-di-sprint-race-motogp-malaysia/">
+							<img width="300" height="195" src="images/Pecco-Bagnaia-300x195.webp" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="images/Pecco-Bagnaia-300x195.webp 300w, images/Pecco-Bagnaia-170x110.webp 170w" sizes="(max-width: 300px) 100vw, 300px">						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/olahraga/2025/pecco-bagnaia-kembali-ke-jalur-kemenangan-di-sprint-race-motogp-malaysia/">Pecco Bagnaia Kembali ke Jalur Kemenangan di Sprint Race MotoGP Malaysia</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 14:45 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+</div>
+
+<div class="component-box">
+	<div class="ads-wrapper">
+		<div class="ads">
+			<!-- Multibanner5 -->
+<div id="div-gpt-ad-multibanner5">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-multibanner5'); });
+  </script>
+</div>
+<!-- Multibanner5 -->		</div>
+	</div>
+</div>
+
+<div class="component-box">
+	<div class="component-title component-title--blue">
+		Ekonomi Bisnis
+		<a href="https://www.suarasurabaya.net/ekonomibisnis/" class="title-link">Berita Lainnya
+			<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg></a>
+	</div>
+	
+<div class="row gap-20">
+								<div class="col-12">
+				<div class="post post-featured">
+					<div class="row">
+						<div class=" col-12 col-lg-auto">
+							<div class="post-img">
+								<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/bapanas-harga-cabai-rawit-rp38-604-per-kg-bawang-merah-rp37-879-per-kg/">
+									<img width="840" height="493" src="images/300B3475-29B8-478F-842E-9548EA8553C5.jpeg-e1759807693905-840x493.webp" class="attachment-ss-single size-ss-single wp-post-image" alt="" decoding="async" loading="lazy">								</a>
+							</div>
+						</div>
+						<div class="col">
+							<h3 class="post-title">
+								<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/bapanas-harga-cabai-rawit-rp38-604-per-kg-bawang-merah-rp37-879-per-kg/">Bapanas: Harga Cabai Rawit Rp38.604 Per Kg, Bawang Merah Rp37.879 Per Kg</a>
+							</h3>
+							<div class="post-date">
+								<span class="post-date__icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>								</span>
+								<span class="date">25 Oktober 2025</span> <span class="time">| 10:44 WIB</span>
+							</div>
+							<div class="post-excerpt limit-text"><p>Badan Pangan Nasional (Bapanas) mencatat harga cabai rawit merah secara nasional pada, Sabtu (25/10/2025), turun menjadi Rp38.604 per kilogram (kg) dari sebelumnya Rp39.856 per kg. Begitu pun bawang merah Rp37.879 per kg turun dari sebelumnya Rp39.328 per kg.</p>
+</div>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/harga-emas-antam-turun-tipis-rp4-000-jadi-rp235-juta-per-gram-hari-ini/">
+							<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-300x195.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-300x195.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-300x195.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-170x110.jpg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-170x110.jpg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-300x195.jpg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/02/IMG_9384-170x110.jpg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/harga-emas-antam-turun-tipis-rp4-000-jadi-rp235-juta-per-gram-hari-ini/">Harga Emas Antam Turun Tipis Rp4.000 Jadi Rp2,35 Juta Per Gram Hari Ini</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 10:44 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/pemprov-jatim-dan-jateng-tandatangani-mou-targetkan-sektor-ekonomi-baru/">
+							<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-300x195.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-300x195.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-300x195.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-170x110.jpg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-170x110.jpg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-300x195.jpg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/20251024_213134-170x110.jpg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/pemprov-jatim-dan-jateng-tandatangani-mou-targetkan-sektor-ekonomi-baru/">Pemprov Jatim dan Jateng Tandatangani MoU, Targetkan Sektor Ekonomi Baru</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">25 Oktober 2025</span> <span class="time">| 00:15 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+										<div class="col-12 col-lg-4">
+				<div class="post md-flex">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/bahlil-beri-sinyal-kuota-tambahan-impor-bbm-swasta-tetap-10-persen-di-2026/">
+							<img width="300" height="195" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-ss-archive size-ss-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 300px) 100vw, 300px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-300x195.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-300x195.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-300x195.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-170x110.jpg.webp 170w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-170x110.jpg 170w" data-eio="j"><noscript><img width="300" height="195" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-300x195.jpg" class="attachment-ss-archive size-ss-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-300x195.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/1000039764-170x110.jpg 170w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>						</a>
+					</div>
+					<div class="post-content">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/ekonomibisnis/2025/bahlil-beri-sinyal-kuota-tambahan-impor-bbm-swasta-tetap-10-persen-di-2026/">Bahlil Beri Sinyal Kuota Tambahan Impor BBM Swasta Tetap 10 Persen di 2026</a>
+						</h3>
+						<div class="post-date">
+							<span class="post-date__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>							</span>
+							<span class="date">24 Oktober 2025</span> <span class="time">| 21:43 WIB</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+</div>
+
+<div class="component-box">
+	<div class="component-title component-title--red">
+		Kampoeng Media
+		<a href="https://www.suarasurabaya.net/kampoengmedia/" class="title-link">Berita Lainnya
+			<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg></a>
+	</div>
+	
+<div class="media-wrapper">
+	<div id="media">
+								<div class="media-item hide show" data-order="1">
+				<img width="1280" height="1031" src="images/82DE53BC-9573-484C-B578-6B7209E869A2.jpeg" class="media-img wp-post-image" alt="" decoding="async" loading="lazy" srcset="images/82DE53BC-9573-484C-B578-6B7209E869A2.jpeg 1280w, images/82DE53BC-9573-484C-B578-6B7209E869A2-300x242.jpeg 300w, images/82DE53BC-9573-484C-B578-6B7209E869A2-1024x825.jpeg 1024w, images/82DE53BC-9573-484C-B578-6B7209E869A2-768x619.jpeg 768w" sizes="(max-width: 1280px) 100vw, 1280px">				<div class="media-text">
+					<h3><a href="https://www.suarasurabaya.net/kampoengmedia/2025/recharge-bareng-kru-suara-surabaya-media-segarkan-diri-dalam-outing-di-lawang/">Recharge Bareng, Kru Suara Surabaya Media Segarkan Diri dalam <i>Outing</i> di Lawang</a></h3>
+				</div>
+			</div>
+								<div class="media-item hide" data-order="2">
+				<img width="2560" height="1707" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="media-img wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-scaled.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-scaled.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-scaled.jpg.webp 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-300x200.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-1024x683.jpg.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-768x512.jpg.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-1536x1024.jpg.webp 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-2048x1365.jpg.webp 2048w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-scaled.jpg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-300x200.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-1024x683.jpg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-768x512.jpg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-1536x1024.jpg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-2048x1365.jpg 2048w" data-eio="j"><noscript><img width="2560" height="1707" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-scaled.jpg" class="media-img wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-scaled.jpg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-300x200.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-1024x683.jpg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-768x512.jpg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-1536x1024.jpg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/FAN03929-2048x1365.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></noscript>				<div class="media-text">
+					<h3><a href="https://www.suarasurabaya.net/kampoengmedia/2025/himakom-upn-veteran-jawa-timur-kunjungi-suara-surabaya-untuk-pelajari-dunia-penyiaran/">Himakom UPN Veteran Jawa Timur Kunjungi Suara Surabaya untuk Pelajari Dunia Penyiaran</a></h3>
+				</div>
+			</div>
+								<div class="media-item hide" data-order="3">
+				<img width="2421" height="1613" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="media-img wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 2421px) 100vw, 2421px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008.jpg.webp 2421w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-300x200.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-1024x682.jpg.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-768x512.jpg.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-1536x1023.jpg.webp 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-2048x1364.jpg.webp 2048w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008.jpg 2421w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-300x200.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-1024x682.jpg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-768x512.jpg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-1536x1023.jpg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-2048x1364.jpg 2048w" data-eio="j"><noscript><img width="2421" height="1613" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008.jpg" class="media-img wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008.jpg 2421w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-300x200.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-1024x682.jpg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-768x512.jpg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-1536x1023.jpg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/IMG-20251003-WA0008-2048x1364.jpg 2048w" sizes="(max-width: 2421px) 100vw, 2421px" /></noscript>				<div class="media-text">
+					<h3><a href="https://www.suarasurabaya.net/kampoengmedia/2025/bem-fisipol-kunjungi-suara-surabaya-media-pelajari-manajemen-media-lokal/">BEM Fisipol Kunjungi Suara Surabaya Media, Pelajari Manajemen Media Lokal</a></h3>
+				</div>
+			</div>
+								<div class="media-item hide" data-order="4">
+				<img width="2560" height="1818" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="media-img wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-scaled.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-scaled.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-scaled.jpeg.webp 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-300x213.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-1024x727.jpeg.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-768x545.jpeg.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-1536x1091.jpeg.webp 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-2048x1454.jpeg.webp 2048w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-scaled.jpeg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-300x213.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-1024x727.jpeg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-768x545.jpeg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-1536x1091.jpeg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-2048x1454.jpeg 2048w" data-eio="j"><noscript><img width="2560" height="1818" src="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-scaled.jpeg" class="media-img wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-scaled.jpeg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-300x213.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-1024x727.jpeg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-768x545.jpeg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-1536x1091.jpeg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-30-at-13.59.26-2048x1454.jpeg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></noscript>				<div class="media-text">
+					<h3><a href="https://www.suarasurabaya.net/kampoengmedia/2025/suara-surabaya-kembali-adakan-birthday-bash-rayakan-staf-yang-berulang-tahun-di-bulan-september/">Suara Surabaya Kembali Adakan Birthday Bash, Rayakan Staf yang Berulang Tahun di Bulan September</a></h3>
+				</div>
+			</div>
+								<div class="media-item hide" data-order="5">
+				<img width="2560" height="1847" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="media-img wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-scaled.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-scaled.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-scaled.jpeg.webp 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-300x216.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-1024x739.jpeg.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-768x554.jpeg.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-1536x1108.jpeg.webp 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-2048x1478.jpeg.webp 2048w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-scaled.jpeg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-300x216.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-1024x739.jpeg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-768x554.jpeg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-1536x1108.jpeg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-2048x1478.jpeg 2048w" data-eio="j"><noscript><img width="2560" height="1847" src="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-scaled.jpeg" class="media-img wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-scaled.jpeg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-300x216.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-1024x739.jpeg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-768x554.jpeg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-1536x1108.jpeg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-14.32.01-2048x1478.jpeg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></noscript>				<div class="media-text">
+					<h3><a href="https://www.suarasurabaya.net/kampoengmedia/2025/suara-surabaya-raih-penghargaan-badan-usaha-peduli-olahraga-dari-gubernur-jatim/">Suara Surabaya Raih Penghargaan Badan Usaha Peduli Olahraga dari Gubernur Jatim</a></h3>
+				</div>
+			</div>
+								<div class="media-item hide" data-order="6">
+				<img width="2560" height="1920" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="media-img wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-scaled.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-scaled.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-scaled.jpg.webp 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-300x225.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-1024x768.jpg.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-768x576.jpg.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-1536x1152.jpg.webp 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-2048x1536.jpg.webp 2048w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-scaled.jpg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-300x225.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-1024x768.jpg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-768x576.jpg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-1536x1152.jpg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-2048x1536.jpg 2048w" data-eio="j"><noscript><img width="2560" height="1920" src="https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-scaled.jpg" class="media-img wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-scaled.jpg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-300x225.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-1024x768.jpg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-768x576.jpg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-1536x1152.jpg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/3c0b4ce9-a9fb-4b8a-baf5-180a014004c9-2048x1536.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></noscript>				<div class="media-text">
+					<h3><a href="https://www.suarasurabaya.net/kampoengmedia/2025/dari-kota-lama-hingga-rawon-konjen-as-ceritakan-kecintaannya-pada-surabaya/">Dari Kota Lama Hingga Rawon, Konjen AS Ceritakan Kecintaannya pada Surabaya</a></h3>
+				</div>
+			</div>
+			</div>
+
+	<div class="media-nav js-tab" data-for="media">
+											<div class="media-nav__item tab-nav active" data-order="1">
+				<div class="media-date">
+					<span class="media-date__number">21</span>
+					<span class="media-date__text">
+						Oktober					</span>
+				</div>
+			</div>
+											<div class="media-nav__item tab-nav" data-order="2">
+				<div class="media-date">
+					<span class="media-date__number">10</span>
+					<span class="media-date__text">
+						Oktober					</span>
+				</div>
+			</div>
+											<div class="media-nav__item tab-nav" data-order="3">
+				<div class="media-date">
+					<span class="media-date__number">3</span>
+					<span class="media-date__text">
+						Oktober					</span>
+				</div>
+			</div>
+											<div class="media-nav__item tab-nav" data-order="4">
+				<div class="media-date">
+					<span class="media-date__number">30</span>
+					<span class="media-date__text">
+						September					</span>
+				</div>
+			</div>
+											<div class="media-nav__item tab-nav" data-order="5">
+				<div class="media-date">
+					<span class="media-date__number">26</span>
+					<span class="media-date__text">
+						September					</span>
+				</div>
+			</div>
+											<div class="media-nav__item tab-nav" data-order="6">
+				<div class="media-date">
+					<span class="media-date__number">10</span>
+					<span class="media-date__text">
+						September					</span>
+				</div>
+			</div>
+			</div>
+</div>
+
+</div>
+
+			</div>
+
+		<div class="col-md-auto">
+	<div class="side-content">
+		<div id="ss-radio-3" class="widget side-component widget_ss-radio"><div class="radio-box">
+	<div class="radio-box__content">
+		<div class="radio-box__text">
+			<span class="btn btn-radio">
+				<img src="images/feather-radio.png" alt="">
+				NOW ON AIR SSFM 100
+			</span>
+			<h4 class="penyiar-text">
+							</h4>
+		</div>
+	</div>
+	<div class="radio-box__wrap">
+		<div class="radio-box__border">
+			<div class="radio-box__img penyiar-img">
+							</div>
+		</div>
+		<div class="radio-box__links">
+			<a href="https://www.suarasurabaya.net/radio/">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg>				RADIO STREAMING
+			</a>
+			<a href="https://www.suarasurabaya.net/radio/">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg>				RADIO ON DEMAND
+			</a>
+			<a href="https://www.suarasurabaya.net/visualradio">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg>				VISUAL RADIO
+			</a>
+		</div>
+	</div>
+</div>
+</div><div id="ss-rectangle-1-3" class="widget side-component widget_ss-rectangle-1">
+<div class="ads-wrapper">
+	<div class="ads">
+		<!-- <a href="https://event.suarasurabaya.net/jago/" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" border="0" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/07/jago_tampil_tutup.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/07/jago_tampil_tutup.jpg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2025/07/jago_tampil_tutup.jpg" border="0"></noscript></a>
+<br /> -->
+<div id="div-gpt-ad-mr1">
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-mr1'); });
+  </script>
+</div>	</div>
+</div>
+</div><div id="ss-category-11" class="widget side-component widget_ss-category"><div class="component-title component-title--sm component-title--primary">Infografis<a href="https://www.suarasurabaya.net/info-grafis/" class="title-link">Selengkapnya</a></div>
+			<div>
+	<div class="post post-featured">
+		<div class="post-img">
+			<a href="https://www.suarasurabaya.net/info-grafis/2025/perceraian-lagi-jadi-sorotan-begini-cara-mencegahnya/" target="_self">
+				<img width="2251" height="1261" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-archive size-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 2251px) 100vw, 2251px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB.png" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB.png.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB.png.webp 2251w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-300x168.png.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-1024x574.png.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-768x430.png.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-1536x860.png.webp 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-2048x1147.png.webp 2048w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB.png 2251w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-300x168.png 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-1024x574.png 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-768x430.png 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-1536x860.png 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-2048x1147.png 2048w" data-eio="j"><noscript><img width="2251" height="1261" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB.png" class="attachment-archive size-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB.png 2251w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-300x168.png 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-1024x574.png 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-768x430.png 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-1536x860.png 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/PERCERAIAN-THUMB-2048x1147.png 2048w" sizes="(max-width: 2251px) 100vw, 2251px" /></noscript>			</a>
+		</div>
+		<h3 class="post-title">
+			<a href="https://www.suarasurabaya.net/info-grafis/2025/perceraian-lagi-jadi-sorotan-begini-cara-mencegahnya/" target="_self">Perceraian Lagi Jadi Sorotan, Begini Cara Mencegahnya</a>
+		</h3>
+	</div>
+	</div>
+			<div>
+	<div class="post post-featured">
+		<div class="post-img">
+			<a href="https://www.suarasurabaya.net/info-grafis/2025/umrah-mandiri-apa-dampak-positif-dan-negatifnya/" target="_self">
+				<img width="2560" height="1441" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-archive size-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-scaled.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-scaled.jpg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-scaled.jpg.webp 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-300x169.jpg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-1024x577.jpg.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-768x432.jpg.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-1536x865.jpg.webp 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-2048x1153.jpg.webp 2048w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-scaled.jpg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-300x169.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-1024x577.jpg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-768x432.jpg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-1536x865.jpg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-2048x1153.jpg 2048w" data-eio="j"><noscript><img width="2560" height="1441" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-scaled.jpg" class="attachment-archive size-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-scaled.jpg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-300x169.jpg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-1024x577.jpg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-768x432.jpg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-1536x865.jpg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/THUMB-9-2048x1153.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></noscript>			</a>
+		</div>
+		<h3 class="post-title">
+			<a href="https://www.suarasurabaya.net/info-grafis/2025/umrah-mandiri-apa-dampak-positif-dan-negatifnya/" target="_self">Umrah Mandiri, Apa Dampak Positif dan Negatifnya?</a>
+		</h3>
+	</div>
+	</div>
+</div><div id="ss-terkini-2" class="widget side-component widget_ss-terkini">
+<div class="terkini">
+	<div class="post-nav post-nav--v2 js-tab" data-for="terkini">
+		<span class="post-nav__item tab-nav active" data-order="1">TERKINI</span>
+		<span class="post-nav__item tab-nav" data-order="2">POPULER</span>
+		<span class="post-nav__item tab-nav" data-order="3">TERPILIH</span>
+	</div>
+
+	<div id="terkini">
+		<div class="tab-content tab-content--v2 hide show" data-order="1">
+							
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/olahraga/2025/noc-indonesia-temui-ioc-di-swiss-bahas-dampak-pembatalan-visa-atlet-israel/" target="_self">NOC Indonesia Temui IOC di Swiss, Bahas Dampak Pembatalan Visa Atlet Israel</a>
+						</h3>
+					</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/olahraga/2025/15-makanan-yang-sebenarnya-tak-perlu-disimpan-di-kulkas/" target="_self">15 Makanan yang Sebenarnya Tak Perlu Disimpan di Kulkas</a>
+						</h3>
+					</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/triyogi-yuwono-resmi-dilantik-jadi-rektor-baru-unusa/" target="_self">Triyogi Yuwono Resmi Dilantik Jadi Rektor Baru Unusa</a>
+						</h3>
+					</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/politik/2025/trump-menuju-asia-untuk-perundingan-perdagangan-dengan-xi-jinping-buka-peluang-bertemu-kim-jong-un/" target="_self">Trump Menuju Asia untuk Perundingan Perdagangan dengan Xi Jinping, Buka Peluang Bertemu Kim Jong Un</a>
+						</h3>
+					</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/termasuk-warga-gaza-palestina-um-surabaya-kukuhkan-927-wisudawan/" target="_self">Termasuk Warga Gaza Palestina, UM Surabaya Kukuhkan 927 Wisudawan</a>
+						</h3>
+					</div>
+
+													</div>
+
+		<div class="tab-content tab-content--v2 hide" data-order="2">
+							
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/senggang/2025/sejumlah-pengguna-iphone-17-pro-lapor-ponsel-cosmic-orange-mereka-berubah-warna-jadi-pink/" target="_self">Sejumlah Pengguna iPhone 17 Pro Lapor Ponsel <i>Cosmic Orange</i> Mereka Berubah Warna Jadi <i>Pink</i></a>
+						</h3>
+													<span class="post-date">
+								dibaca 10495 kali
+							</span>
+											</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/pemkot-surabaya-pasang-barrier-beton-di-jalan-basuki-rahmat-untuk-tekan-pelanggaran-lalu-lintas/" target="_self">Pemkot Surabaya Pasang <i>Barrier</i> Beton di Jalan Basuki Rahmat untuk Tekan Pelanggaran Lalu Lintas</a>
+						</h3>
+													<span class="post-date">
+								dibaca 10337 kali
+							</span>
+											</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/kecelakaan-motor-di-jemursari-surabaya-satu-orang-meninggal-dunia/" target="_self">Kecelakaan Motor di Jemursari Surabaya, Satu Orang Meninggal Dunia</a>
+						</h3>
+													<span class="post-date">
+								dibaca 6137 kali
+							</span>
+											</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/polisi-amankan-34-orang-dalam-pesta-gay-di-surabaya/" target="_self">Polisi Amankan 34 Orang dalam Pesta Gay di Surabaya</a>
+						</h3>
+													<span class="post-date">
+								dibaca 5671 kali
+							</span>
+											</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/34-orang-terlibat-pesta-gay-di-surabaya-ditetapkan-tersangka/" target="_self">34 Orang Terlibat Pesta Gay di Surabaya Ditetapkan Tersangka</a>
+						</h3>
+													<span class="post-date">
+								dibaca 5480 kali
+							</span>
+											</div>
+
+													</div>
+
+		<div class="tab-content tab-content--v2 hide" data-order="3">
+							
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/olahraga/2025/noc-indonesia-temui-ioc-di-swiss-bahas-dampak-pembatalan-visa-atlet-israel/" target="_self">NOC Indonesia Temui IOC di Swiss, Bahas Dampak Pembatalan Visa Atlet Israel</a>
+						</h3>
+						<span class="post-date">
+							hari ini						</span>
+					</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/olahraga/2025/15-makanan-yang-sebenarnya-tak-perlu-disimpan-di-kulkas/" target="_self">15 Makanan yang Sebenarnya Tak Perlu Disimpan di Kulkas</a>
+						</h3>
+						<span class="post-date">
+							hari ini						</span>
+					</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/triyogi-yuwono-resmi-dilantik-jadi-rektor-baru-unusa/" target="_self">Triyogi Yuwono Resmi Dilantik Jadi Rektor Baru Unusa</a>
+						</h3>
+						<span class="post-date">
+							hari ini						</span>
+					</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/politik/2025/trump-menuju-asia-untuk-perundingan-perdagangan-dengan-xi-jinping-buka-peluang-bertemu-kim-jong-un/" target="_self">Trump Menuju Asia untuk Perundingan Perdagangan dengan Xi Jinping, Buka Peluang Bertemu Kim Jong Un</a>
+						</h3>
+						<span class="post-date">
+							hari ini						</span>
+					</div>
+
+				
+					
+					
+					<div class="post post-sm">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/kelanakota/2025/indonesia-sambut-timor-leste-jadi-anggota-penuh-asean/" target="_self">Indonesia Sambut Timor Leste Jadi Anggota Penuh ASEAN</a>
+						</h3>
+						<span class="post-date">
+							hari ini						</span>
+					</div>
+
+													</div>
+	</div>
+</div></div><div id="ss-rectangle-2-3" class="widget side-component widget_ss-rectangle-2">
+<div class="ads-wrapper">
+	<div class="ads">
+			</div>
+</div>
+</div><div id="ss-potret-netter-3" class="widget side-component widget_ss-potret-netter"><div class="component-title component-title--sm component-title--primary">Potret Netter<a href="https://www.suarasurabaya.net/potret-netter/" class="title-link">Selengkapnya</a></div>
+
+	
+	
+		<div class="potret-netter">
+			<div class="potret-netter--thumb">
+				<a href="https://www.suarasurabaya.net/potret-netter/perpaduan-hujan-dan-macet-di-jalan-ahmad-yani/">
+					<img width="1599" height="899" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-archive size-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 1599px) 100vw, 1599px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto.jpeg.webp 1599w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-300x169.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-1024x576.jpeg.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-768x432.jpeg.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-1536x864.jpeg.webp 1536w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto.jpeg 1599w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-300x169.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-1024x576.jpeg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-768x432.jpeg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-1536x864.jpeg 1536w" data-eio="j"><noscript><img width="1599" height="899" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto.jpeg" class="attachment-archive size-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto.jpeg 1599w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-300x169.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-1024x576.jpeg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-768x432.jpeg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/10/251021073115_foto-1536x864.jpeg 1536w" sizes="(max-width: 1599px) 100vw, 1599px" /></noscript>				</a>
+			</div>
+
+			<div class="tab-content">
+				<div class="post post-featured">
+					<div class="post-author">
+						Arif Sulaiman					</div>
+					<h3 class="post-title">
+						<a href="https://www.suarasurabaya.net/potret-netter/perpaduan-hujan-dan-macet-di-jalan-ahmad-yani/">Perpaduan Hujan dan Macet di Jalan Ahmad Yani</a>
+					</h3>
+					<div class="post-date">
+						Selasa, 21 Oktober 2025					</div>
+				</div>
+
+	
+
+	
+	
+		<div class="post post-sm">
+			<div class="row gap-15">
+				<div class="col-auto">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/potret-netter/kebakaran-gedung-ex-bioskop-jalan-mayjen-sungkono/">
+							<img width="150" height="150" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-thumbnail size-thumbnail wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/543155962_25402928002629827_6599042049006691016_n-150x150.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/543155962_25402928002629827_6599042049006691016_n-150x150.jpg.webp" data-eio="j"><noscript><img width="150" height="150" src="https://www.suarasurabaya.net/wp-content/uploads/2025/09/543155962_25402928002629827_6599042049006691016_n-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></noscript>						</a>
+					</div>
+				</div>
+				<div class="col">
+					<div class="post-author">
+						Rudhylazuardi					</div>
+					<h3 class="post-title">
+						<a href="https://www.suarasurabaya.net/potret-netter/kebakaran-gedung-ex-bioskop-jalan-mayjen-sungkono/">Kebakaran Gedung Ex-Bioskop Jalan Mayjen Sungkono</a>
+					</h3>
+					<div class="post-date">
+						Kamis, 4 September 2025					</div>
+				</div>
+			</div>
+		</div>
+
+	
+
+	
+	
+		<div class="post post-sm">
+			<div class="row gap-15">
+				<div class="col-auto">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/potret-netter/kecelakaan-mobil-di-jembatan-suramadu-kondisinya-ringsek/">
+							<img width="150" height="150" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-thumbnail size-thumbnail wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/06/def-150x150.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/06/def-150x150.jpeg.webp" data-eio="j"><noscript><img width="150" height="150" src="https://www.suarasurabaya.net/wp-content/uploads/2025/06/def-150x150.jpeg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></noscript>						</a>
+					</div>
+				</div>
+				<div class="col">
+					<div class="post-author">
+						Ipda Wiji Kanit Laka Lantas Polres Pelabuhan Tanjung Perak					</div>
+					<h3 class="post-title">
+						<a href="https://www.suarasurabaya.net/potret-netter/kecelakaan-mobil-di-jembatan-suramadu-kondisinya-ringsek/">Kecelakaan Mobil di Jembatan Suramadu, Kondisinya Ringsek</a>
+					</h3>
+					<div class="post-date">
+						Sabtu, 21 Juni 2025					</div>
+				</div>
+			</div>
+		</div>
+
+	
+
+	
+	
+		<div class="post post-sm">
+			<div class="row gap-15">
+				<div class="col-auto">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/potret-netter/kecelakaan-bus-tabrak-belakang-truk-di-km-749-tol-sidoarjo-waru/">
+							<img width="150" height="150" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-thumbnail size-thumbnail wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/05/5u45-150x150.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/05/5u45-150x150.jpg.webp" data-eio="j"><noscript><img width="150" height="150" src="https://www.suarasurabaya.net/wp-content/uploads/2025/05/5u45-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></noscript>						</a>
+					</div>
+				</div>
+				<div class="col">
+					<div class="post-author">
+						AKP Tutud Yudho Kanit PJR Jatim 2					</div>
+					<h3 class="post-title">
+						<a href="https://www.suarasurabaya.net/potret-netter/kecelakaan-bus-tabrak-belakang-truk-di-km-749-tol-sidoarjo-waru/">Kecelakaan Bus Tabrak Belakang Truk di KM 749 Tol Sidoarjo-Waru</a>
+					</h3>
+					<div class="post-date">
+						Selasa, 27 Mei 2025					</div>
+				</div>
+			</div>
+		</div>
+
+	
+
+	</div>
+</div>
+</div><div id="ss-category-2" class="widget side-component widget_ss-category"><div class="component-title component-title--sm component-title--primary">Senggang<a href="https://www.suarasurabaya.net/senggang/" class="title-link">Selengkapnya</a></div>
+<div class="potret-netter">
+	<div class="tab-content">
+											<div class="post post-sm">
+				<div class="row gap-20">
+					<div class="col-auto">
+						<div class="post-img">
+							<a href="https://www.suarasurabaya.net/senggang/2025/jangan-buang-kulit-bawang-ini-manfaat-kesehatannya/" target="_self">
+								<img width="150" height="150" src="images/kulit-bawang-150x150.webp" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy">							</a>
+						</div>
+					</div>
+					<div class="col">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/senggang/2025/jangan-buang-kulit-bawang-ini-manfaat-kesehatannya/" target="_self">Jangan Buang Kulit Bawang, Ini Manfaat Kesehatannya</a>
+						</h3>
+					</div>
+				</div>
+			</div>
+											<div class="post post-sm">
+				<div class="row gap-20">
+					<div class="col-auto">
+						<div class="post-img">
+							<a href="https://www.suarasurabaya.net/senggang/2025/cara-menggunakan-integrasi-aplikasi-chatgpt-termasuk-spotify-dan-canva/" target="_self">
+								<img width="150" height="150" src="images/spotify-integration-e1760176626667-150x150.webp" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy">							</a>
+						</div>
+					</div>
+					<div class="col">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/senggang/2025/cara-menggunakan-integrasi-aplikasi-chatgpt-termasuk-spotify-dan-canva/" target="_self">Cara Menggunakan Integrasi Aplikasi ChatGPT, Termasuk Spotify dan Canva</a>
+						</h3>
+					</div>
+				</div>
+			</div>
+											<div class="post post-sm">
+				<div class="row gap-20">
+					<div class="col-auto">
+						<div class="post-img">
+							<a href="https://www.suarasurabaya.net/senggang/2025/kini-bisa-cek-reels-yang-pernah-ditonton-di-instagram/" target="_self">
+								<img width="150" height="150" src="images/Reels-Instagram-150x150.webp" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy">							</a>
+						</div>
+					</div>
+					<div class="col">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/senggang/2025/kini-bisa-cek-reels-yang-pernah-ditonton-di-instagram/" target="_self">Kini Bisa Cek Reels yang Pernah Ditonton di Instagram</a>
+						</h3>
+					</div>
+				</div>
+			</div>
+											<div class="post post-sm">
+				<div class="row gap-20">
+					<div class="col-auto">
+						<div class="post-img">
+							<a href="https://www.suarasurabaya.net/senggang/2025/psikolog-menikah-bukan-sekadar-cinta-tapi-komitmen-dan-kesiapan-emosional/" target="_self">
+								<img width="150" height="150" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-thumbnail size-thumbnail wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/01/hand-83079_1280.jpg-150x150.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/01/hand-83079_1280.jpg-150x150.jpg.webp" data-eio="j"><noscript><img width="150" height="150" src="https://www.suarasurabaya.net/wp-content/uploads/2025/01/hand-83079_1280.jpg-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></noscript>							</a>
+						</div>
+					</div>
+					<div class="col">
+						<h3 class="post-title">
+							<a href="https://www.suarasurabaya.net/senggang/2025/psikolog-menikah-bukan-sekadar-cinta-tapi-komitmen-dan-kesiapan-emosional/" target="_self">Psikolog: Menikah Bukan Sekadar Cinta, Tapi Komitmen dan Kesiapan Emosional</a>
+						</h3>
+					</div>
+				</div>
+			</div>
+			</div>
+</div>
+</div><div id="ss-category-6" class="widget side-component widget_ss-category"><div class="component-title component-title--sm component-title--primary">Jazz Traffic<a href="https://www.suarasurabaya.net/jazztraffic/" class="title-link">Selengkapnya</a></div>
+			<div>
+	<div class="post post-featured">
+		<div class="post-img">
+			<a href="https://www.suarasurabaya.net/jazztraffic/2025/bank-jazz-traffic-festival-2025-hidupkan-kenangan-glenn-fredly-bersama-the-bakuucakar/" target="_self">
+				<img width="2560" height="1920" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-archive size-archive wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-scaled.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-scaled.jpeg.webp" data-srcset-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-scaled.jpeg.webp 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-300x225.jpeg.webp 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-1024x768.jpeg.webp 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-768x576.jpeg.webp 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-1536x1152.jpeg.webp 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-2048x1536.jpeg.webp 2048w" data-srcset-img="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-scaled.jpeg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-300x225.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-1024x768.jpeg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-768x576.jpeg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-1536x1152.jpeg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-2048x1536.jpeg 2048w" data-eio="j"><noscript><img width="2560" height="1920" src="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-scaled.jpeg" class="attachment-archive size-archive wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-scaled.jpeg 2560w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-300x225.jpeg 300w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-1024x768.jpeg 1024w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-768x576.jpeg 768w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-1536x1152.jpeg 1536w, https://www.suarasurabaya.net/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-29-at-12.25.22-AM-2048x1536.jpeg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></noscript>			</a>
+		</div>
+		<h3 class="post-title">
+			<a href="https://www.suarasurabaya.net/jazztraffic/2025/bank-jazz-traffic-festival-2025-hidupkan-kenangan-glenn-fredly-bersama-the-bakuucakar/" target="_self">Bank Jatim Jazz Traffic Festival 2025 Hidupkan Kenangan Glenn Fredly Bersama The Bakuucakar</a>
+		</h3>
+	</div>
+	</div>
+</div><div id="ss-weather-2" class="widget side-component widget_ss-weather">
+<div class="weather">
+	<img src="images/weather-bg.png" alt="" class="weather-bg" loading="lazy">
+	<div class="weather-content">
+		<div class="weather-place">Surabaya</div>
+		<div class="weather-date">Sabtu, 25 Oktober 2025</div>
+		<div class="weather-deg">
+			<img src="images/Icon-weather.png" alt="" loading="lazy">
+			<span>
+									28<sup>o</sup>
+							</span>
+		</div>
+	</div>
+</div>
+</div><div id="custom_html-2" class="widget_text widget side-component widget_custom_html"><div class="component-title component-title--sm component-title--primary">AmsiNews</div><div class="textwidget custom-html-widget"><center><a href="https://amsi.or.id/trustworthy" target="_blank" rel="noopener"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="25%" border="0" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2024/12/Logo-Trusted-2.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2024/12/Logo-Trusted-2.jpg.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/uploads/2024/12/Logo-Trusted-2.jpg" width="25%" border="0"></noscript></a></center>
+<div class="row" id="amsinews-aggregator" data-domain="https://www.suarasurabaya.net">
+</div>
+<script src="js/amsi-widget.js"></script></div></div>	</div>
+</div>	</div>
+
+
+		</div>
+	</main>
+
+	<footer>
+		<div class="main-footer">
+			<div class="container">
+				<div class="footer-logo">
+					<div class="main-logo">
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-surabaya-white.png" data-src-webp="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-surabaya-white.png.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-surabaya-white.png" alt="" loading="lazy"></noscript>
+					</div>
+					<div class="side-logo">
+						<a href="http://www.julajuli.com/rubrik/arsipscg" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-scg-white.png" data-src-webp="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-scg-white.png.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-scg-white.png" alt="" loading="lazy"></noscript></a>
+						<a href="http://www.sheradiofm.com/" target="_blank"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-she-white.png" data-src-webp="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-she-white.png.webp" data-eio="j" class="ewww_webp"><noscript><img src="https://www.suarasurabaya.net/wp-content/themes/ss/dist/img/logo-she-white.png" alt="" loading="lazy"></noscript></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="footer-info">
+	<p>PT RADIO FISKARIA JAYA SUARA SURABAYA, Suara Surabaya Media
+www.suarasurabaya.net adalah portal berita yang berdiri sejak tahun 1999, bagian dari Suara Surabaya Media yang lahir sejak 11 Juni 1983</p>
+
+			<div class="social-wrapper">
+			<span class="social-item social-item--circle"><a target="_blank" href="https://www.facebook.com/e100ss/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></a></span>
+<span class="social-item social-item--circle"><a target="_blank" href="https://www.instagram.com/suarasurabayamedia/?hl=id"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></span>
+<span class="social-item social-item--circle"><a target="_blank" href="https://twitter.com/e100ss"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a></span>
+<span class="social-item social-item--circle"><a target="_blank" href="https://www.youtube.com/channel/UCBVA5QjSUukGuoWutAKyq5w"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a></span>
+<span class="social-item social-item--circle"><a target="_blank" href="https://www.suarasurabaya.net/rss/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg></a></span>
+		</div>
+	</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="component-title component-title--sm component-title--primary">Tautan</div><div class="row tautan-footer">
+	<div class="col-6"><a href="https://www.suarasurabaya.net/kelanakota/">Kelana Kota</a></div>
+<div class="col-6"><a href="https://www.suarasurabaya.net/politik/">Politik</a></div>
+<div class="col-6"><a href="https://www.suarasurabaya.net/olahraga/">Olahraga</a></div>
+<div class="col-6"><a href="https://www.suarasurabaya.net/potret-kelana-kota/">Potret Kelana Kota</a></div>
+<div class="col-6"><a href="https://www.suarasurabaya.net/potret-netter/">Potret Netter</a></div>
+<div class="col-6"><a href="https://www.suarasurabaya.net/senggang/">Senggang</a></div>
+<div class="col-6"><a href="https://www.suarasurabaya.net/kurs/">Kurs</a></div>
+</div>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="component-title component-title--sm component-title--primary">Berita Terpopuler</div>
+<div class="footer-post">
+
+	
+		
+		<div class="post">
+			<div class="row gap-20">
+				<div class="col-auto">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/senggang/2025/sejumlah-pengguna-iphone-17-pro-lapor-ponsel-cosmic-orange-mereka-berubah-warna-jadi-pink/"><img width="150" height="150" src="images/iPhone-1-150x150.webp" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy"></a>
+					</div>
+				</div>
+				<div class="col">
+					<h3 class="post-title">
+						<a href="https://www.suarasurabaya.net/senggang/2025/sejumlah-pengguna-iphone-17-pro-lapor-ponsel-cosmic-orange-mereka-berubah-warna-jadi-pink/">Sejumlah Pengguna iPhone 17 Pro Lapor Ponsel <i>Cosmic Orange</i> Mereka Berubah Warna Jadi <i>Pink</i></a>
+					</h3>
+				</div>
+			</div>
+		</div>
+
+	
+		
+		<div class="post">
+			<div class="row gap-20">
+				<div class="col-auto">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/pemkot-surabaya-pasang-barrier-beton-di-jalan-basuki-rahmat-untuk-tekan-pelanggaran-lalu-lintas/"><img width="150" height="150" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-thumbnail size-thumbnail wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-19-at-5.46.29-PM-150x150.jpeg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-19-at-5.46.29-PM-150x150.jpeg.webp" data-eio="j"><noscript><img width="150" height="150" src="https://www.suarasurabaya.net/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-19-at-5.46.29-PM-150x150.jpeg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></noscript></a>
+					</div>
+				</div>
+				<div class="col">
+					<h3 class="post-title">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/pemkot-surabaya-pasang-barrier-beton-di-jalan-basuki-rahmat-untuk-tekan-pelanggaran-lalu-lintas/">Pemkot Surabaya Pasang <i>Barrier</i> Beton di Jalan Basuki Rahmat untuk Tekan Pelanggaran Lalu Lintas</a>
+					</h3>
+				</div>
+			</div>
+		</div>
+
+	
+		
+		<div class="post">
+			<div class="row gap-20">
+				<div class="col-auto">
+					<div class="post-img">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/kecelakaan-motor-di-jemursari-surabaya-satu-orang-meninggal-dunia/"><img width="150" height="150" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="attachment-thumbnail size-thumbnail wp-post-image ewww_webp" alt="" decoding="async" loading="lazy" data-src-img="https://www.suarasurabaya.net/wp-content/uploads/2024/06/Ilustrasi-Kecelakaan-Motor-150x150.jpg" data-src-webp="https://www.suarasurabaya.net/wp-content/uploads/2024/06/Ilustrasi-Kecelakaan-Motor-150x150.jpg.webp" data-eio="j"><noscript><img width="150" height="150" src="https://www.suarasurabaya.net/wp-content/uploads/2024/06/Ilustrasi-Kecelakaan-Motor-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" /></noscript></a>
+					</div>
+				</div>
+				<div class="col">
+					<h3 class="post-title">
+						<a href="https://www.suarasurabaya.net/kelanakota/2025/kecelakaan-motor-di-jemursari-surabaya-satu-orang-meninggal-dunia/">Kecelakaan Motor di Jemursari Surabaya, Satu Orang Meninggal Dunia</a>
+					</h3>
+				</div>
+			</div>
+		</div>
+
+	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				<div class="copyright-footer">
+			<div class="container">
+				<div class="copyright-wrapper">
+					<p class="copyright">
+						SUARASURABAYA.NET © 2023					</p>
+					<div class="footer-menu">
+						<div class="footer-menu__item"><a href="https://www.suarasurabaya.net/about/">Tentang Kami</a></div>
+<div class="footer-menu__item"><a href="https://www.suarasurabaya.net/pedoman/">Pedoman Media Siber & Kode Perilaku</a></div>
+<div class="footer-menu__item"><a href="https://www.suarasurabaya.net/redaksi/">Redaksi</a></div>
+<div class="footer-menu__item"><a href="https://www.suarasurabaya.net/disclaimer/">Disclaimer</a></div>
+<div class="footer-menu__item"><a href="https://www.suarasurabaya.net/info-iklan/">Info Iklan</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+			</footer>
+</div>
+
+		<script>
+			const counter_url = 'https://www.suarasurabaya.net/wp-content/plugins/page-view-counter/wordpress-pageview-counter/pv-counter.php';
+			const counter_data = 'type=1&id=152';
+
+			var request = new XMLHttpRequest();
+			request.open( 'POST', counter_url, true );
+			request.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8' );
+			request.send( counter_data );
+		</script>
+			
+		<script>
+		if ( document.querySelector( '.penyiar-text' ) ) {
+			var xhr = new XMLHttpRequest();
+			xhr.open( 'GET', 'https://www.suarasurabaya.net/get_penyiar_active/?security=874198ce59', true );
+			xhr.setRequestHeader( 'X-Requested-With', 'XMLHttpRequest' );
+			xhr.onload = function() {
+				if ( xhr.status >= 200 && xhr.status < 400 ) {
+					var res  = JSON.parse( xhr.responseText );
+					if ( res.text ) {
+						document.querySelectorAll( '.penyiar-text' ).forEach( function( val ) {
+							val.innerHTML = res.text;
+						} );
+					}
+					if ( res.img ) {
+						document.querySelectorAll( '.penyiar-img' ).forEach( function( val ) {
+							val.innerHTML = '<img src="' + res.img + '" alt="">';
+						} );
+					}
+				}
+			}
+			xhr.send();
+		}
+	</script>
+
+	<noscript id="deferred-styles">
+		<link rel="stylesheet" href="https://www.suarasurabaya.net/wp-content/themes/ss/dist/css/fonts.min.css">
+
+		
+		
+		
+		<link rel="stylesheet" href="https://www.suarasurabaya.net/wp-content/themes/ss/dist/css/style.min.css">
+	</noscript>
+
+	<script src="js/siema.min.js"></script>
+	<script src="js/script.min.js"></script>
+	<script type="text/javascript">
+	// CSS async
+	var loadDeferredStyles = function() {
+		var addStylesNode = document.getElementById("deferred-styles");
+		if (addStylesNode) {
+			var replacement = document.createElement("div");
+			replacement.innerHTML = addStylesNode.textContent;
+			document.head.appendChild(replacement)
+			addStylesNode.parentElement.removeChild(addStylesNode);
+		}
+	};
+	var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+	window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+	if (raf) raf(function() {
+		window.setTimeout(loadDeferredStyles, 0);
+	});
+	else window.addEventListener('DOMContentLoaded', loadDeferredStyles);
+	</script>
+			<script>
+			var ss_weather = document.querySelectorAll( '.widget_ss-weather' );
+			ss_weather.forEach( function( val ) {
+				weather_load = val.querySelector( '.weather-load');
+				if ( weather_load ) {
+					var widget_id = val.getAttribute( 'id' );
+					widget_id = widget_id.replace( 'ss-weather-', '' );
+					widget_id = parseInt( widget_id );
+
+					var weather_data = 'id=' + widget_id + '&security=6aa1903a51';
+
+					var xhr = new XMLHttpRequest();
+					xhr.open( 'POST', 'https://www.suarasurabaya.net/?ss_weather=1', true );
+					xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8' );
+					xhr.onreadystatechange = function() {
+						if ( xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200 ) {
+							var res  = JSON.parse( xhr.responseText );
+							var name = res.name;
+							var temp = Math.round( res.main.temp );
+							if ( name ) {
+								document.querySelector( '#ss-weather-' + widget_id + ' .weather-place' ).innerHTML = name;
+							}
+							if ( temp ) {
+								document.querySelector( '#ss-weather-' + widget_id + ' .weather-deg span' ).innerHTML = temp + '<sup>o</sup>';
+							}
+						}
+					}
+					xhr.send( weather_data );
+				}
+			} );
+		</script>
+		
+
+
+
+</body></html><!--
+Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
+
+Retrieved 4039 objects (658 KB) from Redis using PhpRedis (v5.3.7).
+-->
